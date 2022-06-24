@@ -1,0 +1,39 @@
+#How to run me:
+
+
+
+foamCleanTutorials
+
+blockMesh
+
+checkMesh
+
+rm -rf 0 > /dev/null 2>&1
+
+cp -r 0_org/ 0
+
+setFields
+
+
+#Choose:
+
+#Steady solution
+#simpleFoam | tee log
+
+#Unsteady solution
+#pisoFoam | tee log
+
+#Remember, you will need to choose the right dictionaries for the case 
+#you will like to solve (in system and constant)
+
+
+
+
+
+
+
+
+gnuplot scripts0/plot_coeffs
+
+
+

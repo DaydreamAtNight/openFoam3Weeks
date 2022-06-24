@@ -1,0 +1,22 @@
+*************************************************************************************************************************************
+laplace
+	c1	
+		hexa mesh
+	c2	
+		tetra mesh
+	c3	
+		polyhedral mesh
+
+	paraview
+		paraview state to open all cases
+		To use it need to run first all three simulations
+*************************************************************************************************************************************
+
+The script runallcses.sh will run all cases.
+In he terminal type:
+	sh run_all.sh
+
+Then in paraFoam/paraview you can open the state paraview/state1.pvsm
+Then choose:
+	Search files under specified directory
+Then give the base directory where all three cases are located (i.e. some_path/laplace)

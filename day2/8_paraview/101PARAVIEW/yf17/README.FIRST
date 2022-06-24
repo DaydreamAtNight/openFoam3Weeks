@@ -1,0 +1,16 @@
+How to run me:
+
+
+
+You do not need to run this case
+We will used it to play around with paraview/paraFoam
+
+
+
+To untar the file:
+
+tar -xzvf c0.tar.gz
+
+
+
+Then go to the direcory c0, and follow the instructions in the README.FIRST file

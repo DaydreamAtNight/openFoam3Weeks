@@ -1,0 +1,90 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (83.3714 0 29.3597);
+
+boundaryField
+{
+    fuselage
+    {
+        type            slip;
+    }
+    strake
+    {
+        type            slip;
+    }
+    wing
+    {
+        type            slip;
+    }
+    vertical-tail
+    {
+        type            slip;
+    }
+    horizontal-tail
+    {
+        type            slip;
+    }
+    intake
+    {
+        type            zeroGradient;
+
+	//type		fixedValue;
+	//value		uniform (58.25 0 0);
+    }
+    intake-ramp
+    {
+        type            slip;
+    }
+    exhaust
+    {
+        type            fixedValue;
+        value           uniform (307.13 0 0);
+    }
+    symmetry
+    {
+        type            symmetry;
+    }
+    side
+    {
+        type            fixedValue;
+        value           uniform (83.3714 0 29.3597);
+    }
+    downstream
+    {
+        type            fixedValue;
+        value           uniform (83.3714 0 29.3597);
+    }
+    upper
+    {
+        type            fixedValue;
+        value           uniform (83.3714 0 29.3597);
+    }
+    lower
+    {
+        type            fixedValue;
+        value           uniform (83.3714 0 29.3597);
+    }
+    upstream
+    {
+        type            fixedValue;
+        value           uniform (83.3714 0 29.3597);
+    }
+}
+
+// ************************************************************************* //

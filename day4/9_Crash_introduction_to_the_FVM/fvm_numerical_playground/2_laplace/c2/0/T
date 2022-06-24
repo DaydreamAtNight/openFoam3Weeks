@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6.x                                   |
+|   \\  /    A nd           | Website:  https://openfoam.org                  |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    left
+    {
+        type            fixedValue;
+        value           uniform 0; 
+    }
+
+    right
+    {
+        type            fixedValue;
+        value           uniform 0; 
+    }
+
+    top
+    {
+/*
+        type            fixedValue;
+        value           uniform 1; 
+*/
+
+//if you have swak4foam you can do like this
+/*
+	type            groovyBC;
+	valueExpression "sin(pi*pos().x)";
+	value		uniform 0;
+*/
+
+//Using codeStream - The recommended way
+
+   	type            codedFixedValue;
+    	value           uniform 0;
+    	redirectType    sineProfile;
+   
+	code
+    	#{
+            const fvPatch& boundaryPatch = patch(); 
+            const vectorField& Cf = boundaryPatch.Cf(); 
+            scalarField& field = *this; 
+        
+ 	    forAll(Cf, faceI)
+            {
+                field[faceI] = sin(constant::mathematical::pi*Cf[faceI].x());  
+	    }
+
+   	#};         
+
+  	codeOptions
+  	#{
+
+            -I$(LIB_SRC)/finiteVolume/lnInclude \
+            -I$(LIB_SRC)/meshTools/lnInclude
+
+   	#};
+
+  	codeInclude
+   	#{
+      	    #include "fvCFD.H"
+      	    #include <cmath>
+     	    #include <iostream>
+  	#};
+    }
+
+    bottom
+    {
+        type            fixedValue;
+        value           uniform 0; 
+    }
+
+    front
+    {
+        type            empty;
+    }
+
+    back
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //

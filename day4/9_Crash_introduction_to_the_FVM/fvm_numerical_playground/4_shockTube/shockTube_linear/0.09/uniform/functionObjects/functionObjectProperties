@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0.09/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    minmaxdomain
+    {
+        vector
+        {
+            min(U)          ( -2.2148009e-21 0 0 );
+            min(U)_position ( 0.0005 0.5 0.5 );
+            max(U)          ( -2.2148009e-21 0 0 );
+            max(U)_position ( 0.0005 0.5 0.5 );
+            min(p)_position ( 0.9945000000000001 0.5 0.5 );
+            max(p)_position ( 0.0375 0.5 0.5 );
+            min(T)_position ( 0.5115 0.5 0.5 );
+            max(T)_position ( 0.6175 0.5 0.5 );
+        }
+        label
+        {
+            min(U)_cell     0;
+            min(U)_processor 0;
+            max(U)_cell     0;
+            max(U)_processor 0;
+            min(p)_cell     994;
+            min(p)_processor 0;
+            max(p)_cell     37;
+            max(p)_processor 0;
+            min(T)_cell     511;
+            min(T)_processor 0;
+            max(T)_cell     617;
+            max(T)_processor 0;
+        }
+        scalar
+        {
+            min(p)          0.09999999997677264;
+            max(p)          1.000000000067829;
+            min(T)          0.002479796617203183;
+            max(T)          0.003951996611727264;
+        }
+    }
+}
+
+
+// ************************************************************************* //

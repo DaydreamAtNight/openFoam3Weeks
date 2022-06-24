@@ -1,0 +1,51 @@
+How to run me:
+
+
+
+You do not need to run this case
+We will used it to play around with paraview/paraFoam
+
+
+
+#If you would like to run the cae
+
+foamCleanTutorials
+
+rm -rf 0
+
+cp -r 0_org 0
+
+fluent3DMeshToFoam ../../../meshes_and_geometries/fluent_yf17/yf17.cas
+
+decomposePar
+
+mpirun -np 4 renumberMesh -overwrite -parallel 
+
+mpirun -np 4 sonicFoam -parallel > log | tail -f log
+
+mpirun -np 4 Mach -parallel 
+
+mpirun -np 4 Q -parallel 
+
+paraview -builtin
+
+
+
+
+
+
+
+NOTE1:
+If you want to run this case use sonicFoam
+
+
+NOTE2:
+If you want to extract the airplane geometry stl file from the mesh to create your own mesh:
+surfaceMeshTriangulate -patches '(fuselage strake wing vertical-tail horizontal-tail intake intake-ramp exhaust)' -noFunctionObjects out.stl
+
+
+
+//Altitude pressure 46040 Pa
+//Temperature 248.00 K
+//Mach number 0.28
+//Angle of attack 19.4 deg

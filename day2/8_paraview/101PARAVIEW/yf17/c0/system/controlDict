@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     sonicFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+//stopAt		writeNow;
+
+endTime         0.2;	//0.2
+
+//deltaT		1e-05;
+//deltaT          2e-06;		//*
+deltaT          3e-06;
+//deltaT          4e-06;
+//deltaT          5e-06;
+//deltaT          6e-06;	
+//deltaT          7e-06;
+//deltaT          8e-06;		
+//deltaT          9e-06;		
+//deltaT          1e-05;		//cfl >2
+
+writeControl    runTime;
+writeInterval   0.0002;
+purgeWrite      15;
+
+secondaryWriteControl    cpuTime;
+secondaryWriteInterval   3600; 
+secondaryPurgeWrite      1; 
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+// ************************************************************************* //
+
+functions
+(
+
+///////////////////////////////////////////////////////////////////////////
+minmaxdomain
+{
+    type fieldMinMax;
+
+    functionObjectLibs ("libfieldFunctionObjects.so");
+
+    enabled true;
+
+    mode component;
+
+    outputControl timeStep;
+    outputInterval 1;
+
+    log true;
+
+    fields (p U T);
+}
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+additional_fields
+ {
+    type writeRegisteredObject;
+    functionObjectLibs ( "libIOFunctionObjects.so" );
+        
+    //objectNames ("rho" "e");	//There is an error with e.  Need to track it.
+    objectNames ("rho" "phi" "thermo:mu");
+
+    enabled         true;
+    outputControl     outputTime;
+
+/*
+    outputControl   timeStep;
+    outputInterval  1;
+*/
+}
+///////////////////////////////////////////////////////////////////////////
+
+);

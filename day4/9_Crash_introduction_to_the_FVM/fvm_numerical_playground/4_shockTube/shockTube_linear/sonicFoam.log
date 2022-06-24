@@ -1,0 +1,2660 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _14aeaf8dab-20211220 OPENFOAM=2112 version=v2112
+Arch   : "LSB;label=32;scalar=64"
+Exec   : sonicFoam
+Date   : Jun 18 2022
+Time   : 22:01:11
+Host   : Songruis-MacBook-Air.local
+PID    : 76456
+I/O    : uncollated
+Case   : /Users/songruili/Documents/Learn/10th_OpenFOAM_3_weeks/day4/9_Crash_introduction_to_the_FVM/fvm_numerical_playground/4_shockTube/shockTube_linear
+nProcs : 1
+trapFpe: Floating point exception trapping - not supported on this platform
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: no residual control data found. Calculations will employ 2 corrector loops
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating turbulence model
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Creating field kinetic energy K
+
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 0 max: 0
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.99991205, Final residual = 0, No Iterations 1
+smoothSolver:  Solving for e, Initial residual = 2.3518461e-11, Final residual = 0, No Iterations 1
+smoothSolver:  Solving for p, Initial residual = 0.0017753122, Final residual = 5.3400209e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.7261489e-12, global = -4.7260794e-12, cumulative = -4.7260794e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.15826054, Final residual = 2.2988466e-17, No Iterations 8
+smoothSolver:  Solving for e, Initial residual = 0.0033434291, Final residual = 1.3638535e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00018642131, Final residual = 3.5371026e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.7257672e-12, global = -4.7255108e-12, cumulative = -9.4515902e-12
+ExecutionTime = 0.06 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (5.1760247e-29 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (5.1760247e-29 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 529 at location (0.5295 0.5 0.5)
+    max(p) = 1 in cell 463 at location (0.4635 0.5 0.5)
+    min(T) = 0.00278 in cell 525 at location (0.5255 0.5 0.5)
+    max(T) = 0.0035132678 in cell 500 at location (0.5005 0.5 0.5)
+
+Time = 0.002
+
+Courant Number mean: 0.002556813 max: 0.80101571
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.13931867, Final residual = 1.5798205e-16, No Iterations 10
+smoothSolver:  Solving for e, Initial residual = 0.0019866701, Final residual = 2.969543e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0015280636, Final residual = 5.8006393e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0823215e-15, global = -8.0640656e-16, cumulative = -9.4523966e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.026617895, Final residual = 9.3947818e-16, No Iterations 13
+smoothSolver:  Solving for e, Initial residual = 0.0027597861, Final residual = 2.8637218e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00028667348, Final residual = 5.6950358e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0456217e-15, global = 2.5887399e-16, cumulative = -9.4521377e-12
+ExecutionTime = 0.1 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (5.1760247e-29 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (5.1760247e-29 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 942 at location (0.9425 0.5 0.5)
+    max(p) = 1 in cell 464 at location (0.4645 0.5 0.5)
+    min(T) = 0.00278 in cell 529 at location (0.5295 0.5 0.5)
+    max(T) = 0.00348 in cell 18 at location (0.0185 0.5 0.5)
+
+Time = 0.003
+
+Courant Number mean: 0.004639221 max: 0.82482622
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.079589734, Final residual = 2.2829649e-16, No Iterations 12
+smoothSolver:  Solving for e, Initial residual = 0.0022621076, Final residual = 2.9234459e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0011764405, Final residual = 5.0324029e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.3858493e-16, global = -6.7264759e-16, cumulative = -9.4528104e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.011662357, Final residual = 4.7485535e-16, No Iterations 12
+smoothSolver:  Solving for e, Initial residual = 0.0019867097, Final residual = 2.9742014e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00020445708, Final residual = 9.1634379e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.676235e-15, global = 5.7968807e-16, cumulative = -9.4522307e-12
+ExecutionTime = 0.14 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.3722429e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.3722429e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 972 at location (0.9725 0.5 0.5)
+    max(p) = 1 in cell 199 at location (0.1995 0.5 0.5)
+    min(T) = 0.00278 in cell 597 at location (0.5975 0.5 0.5)
+    max(T) = 0.0035481942 in cell 503 at location (0.5035 0.5 0.5)
+
+Time = 0.004
+
+Courant Number mean: 0.0068169969 max: 0.8914439
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.054841664, Final residual = 3.9248263e-16, No Iterations 12
+smoothSolver:  Solving for e, Initial residual = 0.0023760377, Final residual = 2.838512e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010383947, Final residual = 5.078643e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.4945161e-16, global = -6.2601965e-16, cumulative = -9.4528567e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0062995348, Final residual = 2.774388e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.0016115873, Final residual = 3.1920333e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00020157698, Final residual = 7.6494871e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3949856e-15, global = 2.3857305e-16, cumulative = -9.4526181e-12
+ExecutionTime = 0.18 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.3722429e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.3722429e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 683 at location (0.6835 0.5 0.5)
+    max(p) = 1 in cell 450 at location (0.4505 0.5 0.5)
+    min(T) = 0.0026573663 in cell 500 at location (0.5005 0.5 0.5)
+    max(T) = 0.0036156545 in cell 505 at location (0.5055 0.5 0.5)
+
+Time = 0.005
+
+Courant Number mean: 0.0090020825 max: 0.91019963
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.042231407, Final residual = 2.5099094e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.002508334, Final residual = 2.9720913e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00099752906, Final residual = 5.1709796e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5058767e-16, global = -6.4138118e-16, cumulative = -9.4532595e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0045270063, Final residual = 7.040356e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.0011974072, Final residual = 2.9011522e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016247764, Final residual = 6.6595329e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2273917e-15, global = 3.808278e-17, cumulative = -9.4532214e-12
+ExecutionTime = 0.23 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.3332294e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.3332294e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 938 at location (0.9385 0.5 0.5)
+    max(p) = 1 in cell 360 at location (0.3605 0.5 0.5)
+    min(T) = 0.0026043958 in cell 500 at location (0.5005 0.5 0.5)
+    max(T) = 0.0036738467 in cell 506 at location (0.5065 0.5 0.5)
+
+Time = 0.006
+
+Courant Number mean: 0.011199898 max: 0.92247118
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.034899822, Final residual = 8.3727634e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.0026833257, Final residual = 3.0034074e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00097358527, Final residual = 5.1681989e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.4470978e-16, global = -6.4478937e-16, cumulative = -9.4538662e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0030119589, Final residual = 1.8750528e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0011259214, Final residual = 2.8860973e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00014241273, Final residual = 6.4477836e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1676743e-15, global = -1.5094809e-16, cumulative = -9.4540172e-12
+ExecutionTime = 0.27 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.3332708e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.3332708e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 938 at location (0.9385 0.5 0.5)
+    max(p) = 1 in cell 186 at location (0.1865 0.5 0.5)
+    min(T) = 0.0025879181 in cell 500 at location (0.5005 0.5 0.5)
+    max(T) = 0.0037067162 in cell 507 at location (0.5075 0.5 0.5)
+
+Time = 0.007
+
+Courant Number mean: 0.013398395 max: 0.9362321
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.029526427, Final residual = 7.5644828e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.0027237748, Final residual = 2.9298232e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00096534655, Final residual = 5.1786401e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.6752981e-16, global = -6.0715114e-16, cumulative = -9.4546243e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.002692337, Final residual = 5.1773456e-16, No Iterations 14
+smoothSolver:  Solving for e, Initial residual = 0.0012849883, Final residual = 3.0764279e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016426885, Final residual = 7.2583719e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3263773e-15, global = 1.4852778e-16, cumulative = -9.4544758e-12
+ExecutionTime = 0.31 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800278e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800278e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 562 at location (0.5625 0.5 0.5)
+    max(p) = 1 in cell 447 at location (0.4475 0.5 0.5)
+    min(T) = 0.0025603112 in cell 502 at location (0.5025 0.5 0.5)
+    max(T) = 0.0037291783 in cell 509 at location (0.5095 0.5 0.5)
+
+Time = 0.008
+
+Courant Number mean: 0.015608142 max: 0.93791994
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.025732926, Final residual = 2.6592139e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0028818161, Final residual = 3.1390564e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00097734673, Final residual = 5.2583805e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5582343e-16, global = -6.2853874e-16, cumulative = -9.4551043e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0020748266, Final residual = 4.7802552e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010427764, Final residual = 3.060747e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012783598, Final residual = 7.3092268e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3201042e-15, global = 1.3721655e-16, cumulative = -9.4549671e-12
+ExecutionTime = 0.36 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800278e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800278e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 946 at location (0.9465 0.5 0.5)
+    max(p) = 1 in cell 205 at location (0.2055 0.5 0.5)
+    min(T) = 0.0025441733 in cell 502 at location (0.5025 0.5 0.5)
+    max(T) = 0.0037511466 in cell 510 at location (0.5105 0.5 0.5)
+
+Time = 0.009
+
+Courant Number mean: 0.017792526 max: 0.9345476
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.022526424, Final residual = 2.1828054e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0028782036, Final residual = 2.9923614e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0009497795, Final residual = 5.309857e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7118497e-16, global = -6.5792818e-16, cumulative = -9.4556251e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0017790926, Final residual = 1.7765901e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00093995451, Final residual = 3.0434802e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011934865, Final residual = 7.3747607e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3413437e-15, global = 2.1960576e-16, cumulative = -9.4554055e-12
+ExecutionTime = 0.4 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 916 at location (0.9165 0.5 0.5)
+    max(p) = 1 in cell 390 at location (0.3905 0.5 0.5)
+    min(T) = 0.0025292149 in cell 502 at location (0.5025 0.5 0.5)
+    max(T) = 0.0037717585 in cell 511 at location (0.5115 0.5 0.5)
+
+Time = 0.01
+
+Courant Number mean: 0.019978381 max: 0.93103746
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.020088999, Final residual = 8.8847675e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0029389749, Final residual = 2.966179e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094507476, Final residual = 5.2513688e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7602558e-16, global = -6.3431784e-16, cumulative = -9.4560398e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0014053663, Final residual = 1.8974004e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0009078435, Final residual = 3.0917699e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011444154, Final residual = 7.3702215e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3315143e-15, global = 2.5857763e-16, cumulative = -9.4557812e-12
+ExecutionTime = 0.45 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.680152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.680152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 982 at location (0.9825 0.5 0.5)
+    max(p) = 1 in cell 433 at location (0.4335 0.5 0.5)
+    min(T) = 0.0025210514 in cell 502 at location (0.5025 0.5 0.5)
+    max(T) = 0.0037987886 in cell 513 at location (0.5135 0.5 0.5)
+
+Time = 0.011
+
+Courant Number mean: 0.022165971 max: 0.92699033
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.018122459, Final residual = 6.5889457e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0030193694, Final residual = 2.8984122e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00093930958, Final residual = 5.3815039e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7266679e-16, global = -6.5061786e-16, cumulative = -9.4564318e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0012307904, Final residual = 2.218992e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00085114378, Final residual = 3.0379322e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010944316, Final residual = 7.1322155e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2802927e-15, global = 2.4351246e-16, cumulative = -9.4561883e-12
+ExecutionTime = 0.5 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.680152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.680152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 926 at location (0.9265 0.5 0.5)
+    max(p) = 1 in cell 34 at location (0.0345 0.5 0.5)
+    min(T) = 0.0025196645 in cell 502 at location (0.5025 0.5 0.5)
+    max(T) = 0.0038094673 in cell 514 at location (0.5145 0.5 0.5)
+
+Time = 0.012
+
+Courant Number mean: 0.024355312 max: 0.92659121
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.016535483, Final residual = 5.0559947e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0031161249, Final residual = 3.1600128e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00093741311, Final residual = 5.3106193e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7810013e-16, global = -6.5022271e-16, cumulative = -9.4568385e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0011583534, Final residual = 6.3951201e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00086192281, Final residual = 2.8832412e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010850085, Final residual = 7.0609897e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2655239e-15, global = 2.604546e-16, cumulative = -9.4565781e-12
+ExecutionTime = 0.54 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 928 at location (0.9285 0.5 0.5)
+    max(p) = 1 in cell 436 at location (0.4365 0.5 0.5)
+    min(T) = 0.0025143188 in cell 503 at location (0.5035 0.5 0.5)
+    max(T) = 0.0038297934 in cell 515 at location (0.5155 0.5 0.5)
+
+Time = 0.013
+
+Courant Number mean: 0.026545872 max: 0.92906374
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.015224357, Final residual = 4.5374696e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0031898096, Final residual = 3.2260834e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00093617433, Final residual = 5.3842163e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.9123894e-16, global = -6.8716943e-16, cumulative = -9.4572652e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0010970385, Final residual = 7.248082e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0008710996, Final residual = 2.9407101e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010626896, Final residual = 7.0080085e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2509032e-15, global = 2.6203521e-16, cumulative = -9.4570032e-12
+ExecutionTime = 0.58 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 928 at location (0.9285 0.5 0.5)
+    max(p) = 1 in cell 189 at location (0.1895 0.5 0.5)
+    min(T) = 0.0025110669 in cell 503 at location (0.5035 0.5 0.5)
+    max(T) = 0.0038481886 in cell 517 at location (0.5175 0.5 0.5)
+
+Time = 0.014
+
+Courant Number mean: 0.028738758 max: 0.93088107
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.014106932, Final residual = 2.8766943e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0032797399, Final residual = 3.2004014e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00093663711, Final residual = 5.4065092e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.6664072e-16, global = -6.7946396e-16, cumulative = -9.4576827e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0010721703, Final residual = 6.0548965e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00093772629, Final residual = 3.1524018e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011195312, Final residual = 6.8135461e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2207729e-15, global = 2.4366064e-16, cumulative = -9.457439e-12
+ExecutionTime = 0.63 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.6800692e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 987 at location (0.9875 0.5 0.5)
+    max(p) = 1 in cell 5 at location (0.0055 0.5 0.5)
+    min(T) = 0.0025078338 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.003855418 in cell 519 at location (0.5195 0.5 0.5)
+
+Time = 0.015
+
+Courant Number mean: 0.030930724 max: 0.93141551
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.013178858, Final residual = 9.5885132e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033351727, Final residual = 3.1087245e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094571944, Final residual = 5.4486931e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7518588e-16, global = -6.7190668e-16, cumulative = -9.4581109e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0009978374, Final residual = 7.6851037e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00095966553, Final residual = 3.0158027e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011053073, Final residual = 6.5989874e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1835792e-15, global = 2.3136153e-16, cumulative = -9.4578795e-12
+ExecutionTime = 0.67 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (8.4149896e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (8.4149896e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 986 at location (0.9865 0.5 0.5)
+    max(p) = 1 in cell 196 at location (0.1965 0.5 0.5)
+    min(T) = 0.0025094653 in cell 503 at location (0.5035 0.5 0.5)
+    max(T) = 0.0038702038 in cell 521 at location (0.5215 0.5 0.5)
+
+Time = 0.016
+
+Courant Number mean: 0.033123182 max: 0.9313323
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.012401428, Final residual = 7.3283914e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033835331, Final residual = 3.084482e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094807351, Final residual = 5.4185529e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.8699105e-16, global = -6.8637912e-16, cumulative = -9.4585659e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00095772796, Final residual = 6.5493545e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00093247781, Final residual = 3.1438227e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011348099, Final residual = 6.4848221e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1687116e-15, global = 2.3625154e-16, cumulative = -9.4583297e-12
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (8.4147826e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (8.4147826e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 921 at location (0.9215 0.5 0.5)
+    max(p) = 1 in cell 371 at location (0.3715 0.5 0.5)
+    min(T) = 0.0025089717 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0038867076 in cell 521 at location (0.5215 0.5 0.5)
+
+Time = 0.017
+
+Courant Number mean: 0.035313349 max: 0.93238654
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.011654688, Final residual = 4.876815e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033543724, Final residual = 3.1348667e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0009533185, Final residual = 5.541177e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0142072e-15, global = -6.8652731e-16, cumulative = -9.4590162e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00085303043, Final residual = 4.8986736e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00087291955, Final residual = 3.238572e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010757868, Final residual = 6.4154255e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1614507e-15, global = 2.4736519e-16, cumulative = -9.4587688e-12
+ExecutionTime = 0.75 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (8.4156107e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (8.4156107e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 994 at location (0.9945 0.5 0.5)
+    max(p) = 1 in cell 76 at location (0.0765 0.5 0.5)
+    min(T) = 0.0025067801 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0038908072 in cell 523 at location (0.5235 0.5 0.5)
+
+Time = 0.018
+
+Courant Number mean: 0.037502224 max: 0.93167018
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.010995461, Final residual = 5.322686e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033444523, Final residual = 3.1651328e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094153651, Final residual = 5.5138717e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.9637591e-16, global = -6.848973e-16, cumulative = -9.4594537e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0007825391, Final residual = 3.7424485e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00085331635, Final residual = 3.1753329e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011022043, Final residual = 6.3790713e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1451013e-15, global = 2.2775577e-16, cumulative = -9.459226e-12
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.5804391e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.5804391e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 995 at location (0.9955 0.5 0.5)
+    max(p) = 1 in cell 79 at location (0.0795 0.5 0.5)
+    min(T) = 0.0025060173 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0039000821 in cell 523 at location (0.5235 0.5 0.5)
+
+Time = 0.019
+
+Courant Number mean: 0.039692812 max: 0.9324278
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.010394811, Final residual = 3.1181541e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0033107398, Final residual = 3.2316796e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094872936, Final residual = 5.6427074e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0180599e-15, global = -6.9462792e-16, cumulative = -9.4599206e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0007377955, Final residual = 5.2339519e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076646883, Final residual = 3.0257032e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 9.8715629e-05, Final residual = 6.2766761e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1252943e-15, global = 2.5507065e-16, cumulative = -9.4596655e-12
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.4912468e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.4912468e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 993 at location (0.9935 0.5 0.5)
+    max(p) = 1 in cell 8 at location (0.0085 0.5 0.5)
+    min(T) = 0.002505042 in cell 504 at location (0.5045 0.5 0.5)
+    max(T) = 0.0039021105 in cell 525 at location (0.5255 0.5 0.5)
+
+Time = 0.02
+
+Courant Number mean: 0.041882036 max: 0.93174061
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0098700861, Final residual = 2.7083237e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0033279433, Final residual = 3.2670066e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00093649553, Final residual = 5.6982989e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0199862e-15, global = -7.1196522e-16, cumulative = -9.4603775e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00070945322, Final residual = 8.7518551e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0007295367, Final residual = 3.1820395e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 9.4566775e-05, Final residual = 6.2785555e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1213921e-15, global = 2.4366064e-16, cumulative = -9.4601338e-12
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.180741e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.180741e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 995 at location (0.9955 0.5 0.5)
+    max(p) = 1 in cell 123 at location (0.1235 0.5 0.5)
+    min(T) = 0.0025047232 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0039126817 in cell 527 at location (0.5275 0.5 0.5)
+
+Time = 0.021
+
+Courant Number mean: 0.04406978 max: 0.93107774
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0094181049, Final residual = 9.9395104e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003335254, Final residual = 3.3838598e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094100309, Final residual = 5.633816e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0071932e-15, global = -7.1962129e-16, cumulative = -9.4608535e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0006885975, Final residual = 7.0490559e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00075798676, Final residual = 3.2494136e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010002962, Final residual = 6.2605184e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.117737e-15, global = 2.5087216e-16, cumulative = -9.4606026e-12
+ExecutionTime = 0.92 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.180741e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.180741e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 714 at location (0.7145 0.5 0.5)
+    max(p) = 1 in cell 122 at location (0.1225 0.5 0.5)
+    min(T) = 0.0025036719 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0039151784 in cell 527 at location (0.5275 0.5 0.5)
+
+Time = 0.022
+
+Courant Number mean: 0.046255377 max: 0.93126959
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0090047914, Final residual = 9.5824554e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033756032, Final residual = 3.2595524e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094784019, Final residual = 5.6497396e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0218138e-15, global = -6.9818429e-16, cumulative = -9.4613008e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00067146325, Final residual = 7.1753978e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00074866088, Final residual = 3.2320988e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 9.5233403e-05, Final residual = 6.2109447e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1235655e-15, global = 2.4573519e-16, cumulative = -9.461055e-12
+ExecutionTime = 0.97 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.1807514e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.1807514e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 996 at location (0.9965 0.5 0.5)
+    max(p) = 1 in cell 11 at location (0.0115 0.5 0.5)
+    min(T) = 0.0025022607 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0039237953 in cell 529 at location (0.5295 0.5 0.5)
+
+Time = 0.023
+
+Courant Number mean: 0.048443563 max: 0.9298061
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0086320941, Final residual = 6.1183623e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0033936146, Final residual = 3.1621989e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094388101, Final residual = 5.7378577e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0264569e-15, global = -7.3256252e-16, cumulative = -9.4617876e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00066492185, Final residual = 2.6412889e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00072470739, Final residual = 3.2429309e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 9.6456109e-05, Final residual = 6.1054325e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0855815e-15, global = 2.4489549e-16, cumulative = -9.4615427e-12
+ExecutionTime = 1.01 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.1807514e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.1807514e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 997 at location (0.9975 0.5 0.5)
+    max(p) = 1 in cell 120 at location (0.1205 0.5 0.5)
+    min(T) = 0.0025007255 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039280576 in cell 531 at location (0.5315 0.5 0.5)
+
+Time = 0.024
+
+Courant Number mean: 0.0506314 max: 0.9296525
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0082734983, Final residual = 2.7904232e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0034167073, Final residual = 3.2422539e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00094557191, Final residual = 5.7730247e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0202332e-15, global = -7.0588976e-16, cumulative = -9.4622486e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00065727024, Final residual = 6.8073762e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00073334189, Final residual = 3.330978e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 9.8782393e-05, Final residual = 5.9653435e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0704175e-15, global = 2.5195883e-16, cumulative = -9.4619966e-12
+ExecutionTime = 1.05 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.1873744e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.1873744e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 997 at location (0.9975 0.5 0.5)
+    max(p) = 1 in cell 23 at location (0.0235 0.5 0.5)
+    min(T) = 0.0025001397 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.0039277434 in cell 533 at location (0.5335 0.5 0.5)
+
+Time = 0.025
+
+Courant Number mean: 0.052819985 max: 0.92994672
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0079575376, Final residual = 7.9053834e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0034400097, Final residual = 3.3615174e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0009491122, Final residual = 5.7911729e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.035002e-15, global = -7.2905555e-16, cumulative = -9.4627257e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00063890163, Final residual = 6.9169288e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00075911547, Final residual = 3.3529219e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010314034, Final residual = 6.0389862e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0812842e-15, global = 2.6885158e-16, cumulative = -9.4624568e-12
+ExecutionTime = 1.09 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.5976023e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.5976023e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 712 at location (0.7125 0.5 0.5)
+    max(p) = 1 in cell 7 at location (0.0075 0.5 0.5)
+    min(T) = 0.0024990721 in cell 505 at location (0.5055 0.5 0.5)
+    max(T) = 0.003933962 in cell 533 at location (0.5335 0.5 0.5)
+
+Time = 0.026
+
+Courant Number mean: 0.055007493 max: 0.93058553
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0076684069, Final residual = 4.7134112e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0035339037, Final residual = 3.2765643e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00095963058, Final residual = 5.8654896e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0357429e-15, global = -7.3651404e-16, cumulative = -9.4631934e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00060324437, Final residual = 5.8586633e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00076020406, Final residual = 3.1128244e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001005446, Final residual = 5.9503418e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0610327e-15, global = 2.5917036e-16, cumulative = -9.4629342e-12
+ExecutionTime = 1.13 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.5976023e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.5976023e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 658 at location (0.6585 0.5 0.5)
+    max(p) = 1 in cell 6 at location (0.0065 0.5 0.5)
+    min(T) = 0.0024976812 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039385714 in cell 535 at location (0.5355 0.5 0.5)
+
+Time = 0.027
+
+Courant Number mean: 0.057192476 max: 0.93139309
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.007412733, Final residual = 4.0523638e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0034996049, Final residual = 3.2113645e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00095410079, Final residual = 5.8505153e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0384102e-15, global = -7.219922e-16, cumulative = -9.4636562e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00057925018, Final residual = 5.6920121e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00077433205, Final residual = 3.4246834e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010302443, Final residual = 6.1838706e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0950651e-15, global = 3.2155499e-16, cumulative = -9.4633346e-12
+ExecutionTime = 1.18 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.5976127e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.5976127e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 659 at location (0.6595 0.5 0.5)
+    max(p) = 1 in cell 5 at location (0.0055 0.5 0.5)
+    min(T) = 0.0024955006 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039386561 in cell 535 at location (0.5355 0.5 0.5)
+
+Time = 0.028
+
+Courant Number mean: 0.059376826 max: 0.9314188
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0071604243, Final residual = 2.2445745e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0034885607, Final residual = 3.3053154e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00095307644, Final residual = 5.9091997e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0453748e-15, global = -7.2668463e-16, cumulative = -9.4640613e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0005628537, Final residual = 4.8628136e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00080929106, Final residual = 3.2183213e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010510843, Final residual = 6.8768218e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2114374e-15, global = 3.9367024e-16, cumulative = -9.4636676e-12
+ExecutionTime = 1.22 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.597447e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.597447e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 661 at location (0.6615 0.5 0.5)
+    max(p) = 1 in cell 0 at location (0.0005 0.5 0.5)
+    min(T) = 0.002494289 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039413264 in cell 537 at location (0.5375 0.5 0.5)
+
+Time = 0.029
+
+Courant Number mean: 0.06156181 max: 0.93099856
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0069323251, Final residual = 2.9739021e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0035051771, Final residual = 3.335401e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00095819597, Final residual = 5.9009898e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0279387e-15, global = -7.4145344e-16, cumulative = -9.4644091e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00053542186, Final residual = 5.4968567e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00082844895, Final residual = 3.1224541e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00010935513, Final residual = 5.8945535e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0329769e-15, global = 2.7566795e-16, cumulative = -9.4641334e-12
+ExecutionTime = 1.26 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.5974056e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.5974056e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 661 at location (0.6615 0.5 0.5)
+    max(p) = 1 in cell 0 at location (0.0005 0.5 0.5)
+    min(T) = 0.00249314 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039437037 in cell 539 at location (0.5395 0.5 0.5)
+
+Time = 0.03
+
+Courant Number mean: 0.063747698 max: 0.93037845
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0067255039, Final residual = 2.0392441e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003555551, Final residual = 3.3652703e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00096536537, Final residual = 5.8933626e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0467578e-15, global = -7.6975621e-16, cumulative = -9.4649032e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0005248931, Final residual = 9.7055929e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00088846461, Final residual = 3.1417867e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011498882, Final residual = 6.22938e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1013382e-15, global = 3.5756322e-16, cumulative = -9.4645456e-12
+ExecutionTime = 1.3 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.5974056e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.5974056e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 986 at location (0.9865 0.5 0.5)
+    max(p) = 1 in cell 1 at location (0.0015 0.5 0.5)
+    min(T) = 0.0024922099 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039451687 in cell 541 at location (0.5415 0.5 0.5)
+
+Time = 0.031
+
+Courant Number mean: 0.065932305 max: 0.93010098
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0065245409, Final residual = 2.6185443e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0035421744, Final residual = 3.3547201e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00096666669, Final residual = 6.0302981e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0584642e-15, global = -7.7138621e-16, cumulative = -9.465317e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00052225022, Final residual = 2.4282869e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00092159128, Final residual = 3.2485564e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012131983, Final residual = 5.7363538e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0286302e-15, global = 2.6598673e-16, cumulative = -9.465051e-12
+ExecutionTime = 1.35 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418817e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418817e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 987 at location (0.9875 0.5 0.5)
+    max(p) = 1 in cell 0 at location (0.0005 0.5 0.5)
+    min(T) = 0.0024913026 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039468585 in cell 543 at location (0.5435 0.5 0.5)
+
+Time = 0.032
+
+Courant Number mean: 0.068119143 max: 0.93112092
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0063425428, Final residual = 3.5131233e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0035807524, Final residual = 3.2754161e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00097190158, Final residual = 5.9580754e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0483384e-15, global = -7.6195196e-16, cumulative = -9.465813e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00051087361, Final residual = 9.4530534e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00094430099, Final residual = 3.1808556e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012447601, Final residual = 5.7372178e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0074402e-15, global = 2.6573976e-16, cumulative = -9.4655472e-12
+ExecutionTime = 1.39 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 962 at location (0.9625 0.5 0.5)
+    max(p) = 1 in cell 1 at location (0.0015 0.5 0.5)
+    min(T) = 0.0024905399 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039486237 in cell 543 at location (0.5435 0.5 0.5)
+
+Time = 0.033
+
+Courant Number mean: 0.070302332 max: 0.93195029
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0061764498, Final residual = 7.9940625e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0036498337, Final residual = 3.228208e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00097759108, Final residual = 5.9922282e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0661203e-15, global = -7.4160162e-16, cumulative = -9.4662888e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00051124503, Final residual = 7.9702201e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0009876208, Final residual = 3.1843605e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013088555, Final residual = 5.7668458e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0161829e-15, global = 2.8090372e-16, cumulative = -9.4660079e-12
+ExecutionTime = 1.43 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418796e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418796e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 948 at location (0.9485 0.5 0.5)
+    max(p) = 1 in cell 12 at location (0.0125 0.5 0.5)
+    min(T) = 0.0024899089 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039494263 in cell 545 at location (0.5455 0.5 0.5)
+
+Time = 0.034
+
+Courant Number mean: 0.07248491 max: 0.93248895
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0060240268, Final residual = 8.880228e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0037038953, Final residual = 3.2492858e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00098674065, Final residual = 6.0013921e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0636506e-15, global = -7.5009739e-16, cumulative = -9.466758e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00050744253, Final residual = 2.4468614e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00097753036, Final residual = 3.2026191e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012997419, Final residual = 6.8658467e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1954832e-15, global = 8.8069515e-17, cumulative = -9.46667e-12
+ExecutionTime = 1.48 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 946 at location (0.9465 0.5 0.5)
+    max(p) = 1 in cell 4 at location (0.0045 0.5 0.5)
+    min(T) = 0.002489667 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039497951 in cell 547 at location (0.5475 0.5 0.5)
+
+Time = 0.035
+
+Courant Number mean: 0.074666663 max: 0.93280898
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.005883931, Final residual = 7.3235103e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0037037819, Final residual = 3.2178479e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00098149493, Final residual = 6.0729995e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0660215e-15, global = -7.7153439e-16, cumulative = -9.4674415e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00049993675, Final residual = 9.0960528e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010098017, Final residual = 3.3898706e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013497559, Final residual = 6.5422425e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1545849e-15, global = 1.5771507e-16, cumulative = -9.4672838e-12
+ExecutionTime = 1.52 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 946 at location (0.9465 0.5 0.5)
+    max(p) = 1 in cell 0 at location (0.0005 0.5 0.5)
+    min(T) = 0.0024894881 in cell 506 at location (0.5065 0.5 0.5)
+    max(T) = 0.0039509675 in cell 547 at location (0.5475 0.5 0.5)
+
+Time = 0.036
+
+Courant Number mean: 0.076847332 max: 0.93312015
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0057252291, Final residual = 9.6436609e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0036446632, Final residual = 3.3391949e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00099045562, Final residual = 6.1305774e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0630084e-15, global = -7.5399952e-16, cumulative = -9.4680378e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00047798754, Final residual = 7.8545842e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010658289, Final residual = 3.3191886e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001399337, Final residual = 3.6059724e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.5466817e-16, global = -1.8088085e-16, cumulative = -9.4682187e-12
+ExecutionTime = 1.56 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 965 at location (0.9655 0.5 0.5)
+    max(p) = 1 in cell 10 at location (0.0105 0.5 0.5)
+    min(T) = 0.0024889465 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039508937 in cell 549 at location (0.5495 0.5 0.5)
+
+Time = 0.037
+
+Courant Number mean: 0.079029057 max: 0.93373508
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0055864106, Final residual = 2.417565e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036760282, Final residual = 3.1986203e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00099833466, Final residual = 6.120377e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0724921e-15, global = -7.5370316e-16, cumulative = -9.4689724e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0004681571, Final residual = 2.1083986e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0011529336, Final residual = 3.3191609e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00015225813, Final residual = 9.6607681e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.6823599e-15, global = -4.1164966e-16, cumulative = -9.469384e-12
+ExecutionTime = 1.6 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 957 at location (0.9575 0.5 0.5)
+    max(p) = 1 in cell 6 at location (0.0065 0.5 0.5)
+    min(T) = 0.0024884802 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.003951648 in cell 549 at location (0.5495 0.5 0.5)
+
+Time = 0.038
+
+Courant Number mean: 0.081213685 max: 0.93555007
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0054402462, Final residual = 2.8109464e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003685731, Final residual = 3.2641408e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010415399, Final residual = 6.2244715e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0811854e-15, global = -7.5093709e-16, cumulative = -9.4701349e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00045590428, Final residual = 4.2442467e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0014478417, Final residual = 3.1710179e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00019363837, Final residual = 7.6046539e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3084966e-15, global = 3.2170317e-16, cumulative = -9.4698132e-12
+ExecutionTime = 1.64 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.0418838e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 958 at location (0.9585 0.5 0.5)
+    max(p) = 1 in cell 9 at location (0.0095 0.5 0.5)
+    min(T) = 0.0024878685 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039514227 in cell 551 at location (0.5515 0.5 0.5)
+
+Time = 0.039
+
+Courant Number mean: 0.083396169 max: 0.9404431
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0053136035, Final residual = 2.4602548e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037343712, Final residual = 3.3008187e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010574519, Final residual = 6.2835945e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0943242e-15, global = -7.9588564e-16, cumulative = -9.4706091e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00043926167, Final residual = 8.5878454e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0015404719, Final residual = 3.1659545e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00020761876, Final residual = 3.447944e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.2715571e-16, global = 1.6744568e-17, cumulative = -9.4705924e-12
+ExecutionTime = 1.69 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.2483152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.2483152e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 957 at location (0.9575 0.5 0.5)
+    max(p) = 1 in cell 8 at location (0.0085 0.5 0.5)
+    min(T) = 0.0024875735 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039520952 in cell 553 at location (0.5535 0.5 0.5)
+
+Time = 0.04
+
+Courant Number mean: 0.085580447 max: 0.94625769
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0051908574, Final residual = 9.657628e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0040130335, Final residual = 3.2053772e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010814277, Final residual = 6.1698369e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0786169e-15, global = -7.7405349e-16, cumulative = -9.4713664e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00044322308, Final residual = 2.1196701e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0014700037, Final residual = 3.3119019e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00019395173, Final residual = 3.3608333e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.2024055e-16, global = -3.2550651e-17, cumulative = -9.471399e-12
+ExecutionTime = 1.74 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (3.1249939e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (3.1249939e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 954 at location (0.9545 0.5 0.5)
+    max(p) = 1 in cell 11 at location (0.0115 0.5 0.5)
+    min(T) = 0.0024872793 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039521087 in cell 555 at location (0.5555 0.5 0.5)
+
+Time = 0.041
+
+Courant Number mean: 0.087766433 max: 0.94690984
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0050818521, Final residual = 2.5426714e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0038562624, Final residual = 3.3699445e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001060786, Final residual = 7.6742739e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.331613e-15, global = -1.058069e-15, cumulative = -9.4724571e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00043080099, Final residual = 8.191208e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.001281744, Final residual = 3.256657e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00017479151, Final residual = 5.8751188e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0202332e-15, global = 7.162625e-16, cumulative = -9.4717408e-12
+ExecutionTime = 1.78 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 959 at location (0.9595 0.5 0.5)
+    max(p) = 1 in cell 301 at location (0.3015 0.5 0.5)
+    min(T) = 0.0024872362 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039525098 in cell 557 at location (0.5575 0.5 0.5)
+
+Time = 0.042
+
+Courant Number mean: 0.089946621 max: 0.94501447
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0049789166, Final residual = 2.3041985e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037561318, Final residual = 3.2414529e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010352302, Final residual = 6.505091e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1415943e-15, global = -8.4463752e-16, cumulative = -9.4725854e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00043534696, Final residual = 6.4564777e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0013061057, Final residual = 3.2352059e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00018280338, Final residual = 4.6425064e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.2937478e-16, global = 5.0979555e-16, cumulative = -9.4720756e-12
+ExecutionTime = 1.83 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 954 at location (0.9545 0.5 0.5)
+    max(p) = 1 in cell 9 at location (0.0095 0.5 0.5)
+    min(T) = 0.0024871843 in cell 507 at location (0.5075 0.5 0.5)
+    max(T) = 0.0039528094 in cell 557 at location (0.5575 0.5 0.5)
+
+Time = 0.043
+
+Courant Number mean: 0.09212841 max: 0.94265517
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.00487894, Final residual = 8.8679152e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0037941574, Final residual = 3.0856624e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010487381, Final residual = 6.237653e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0910642e-15, global = -7.6111226e-16, cumulative = -9.4728367e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00042334819, Final residual = 7.1046736e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0012630033, Final residual = 3.2334679e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00018048671, Final residual = 4.2377439e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.5162861e-16, global = 4.3234575e-16, cumulative = -9.4724044e-12
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (3.1245798e-24 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 954 at location (0.9545 0.5 0.5)
+    max(p) = 1 in cell 304 at location (0.3045 0.5 0.5)
+    min(T) = 0.0024871262 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039531027 in cell 559 at location (0.5595 0.5 0.5)
+
+Time = 0.044
+
+Courant Number mean: 0.094308536 max: 0.94168736
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0047698269, Final residual = 8.7348129e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0037137385, Final residual = 3.2805098e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010460845, Final residual = 6.4486712e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1388776e-15, global = -8.1880446e-16, cumulative = -9.4732232e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00040998169, Final residual = 8.0434988e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0013157893, Final residual = 3.3603393e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001814315, Final residual = 7.8173845e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3477155e-15, global = 6.8692246e-16, cumulative = -9.4725363e-12
+ExecutionTime = 1.92 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.504764e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.504764e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 953 at location (0.9535 0.5 0.5)
+    max(p) = 1 in cell 15 at location (0.0155 0.5 0.5)
+    min(T) = 0.0024870873 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039531469 in cell 559 at location (0.5595 0.5 0.5)
+
+Time = 0.045
+
+Courant Number mean: 0.096488695 max: 0.9416557
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0046768229, Final residual = 2.5834416e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0038202329, Final residual = 3.2891536e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010375167, Final residual = 6.3382984e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.099313e-15, global = -7.854635e-16, cumulative = -9.4733217e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00040645438, Final residual = 6.6640602e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0012178441, Final residual = 3.2579198e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016183666, Final residual = 7.2394159e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.232825e-15, global = 5.151795e-17, cumulative = -9.4732702e-12
+ExecutionTime = 1.96 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (1.5047847e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (1.5047847e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 950 at location (0.9505 0.5 0.5)
+    max(p) = 1 in cell 98 at location (0.0985 0.5 0.5)
+    min(T) = 0.0024868032 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039533832 in cell 561 at location (0.5615 0.5 0.5)
+
+Time = 0.046
+
+Courant Number mean: 0.098670621 max: 0.94244413
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0045830452, Final residual = 3.2403772e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037582883, Final residual = 3.4529007e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010338383, Final residual = 6.3033317e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0921015e-15, global = -7.8269744e-16, cumulative = -9.4740529e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00039551311, Final residual = 7.8074691e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.001193045, Final residual = 3.2842988e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016381304, Final residual = 5.790918e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0022538e-15, global = 2.6282551e-16, cumulative = -9.4737901e-12
+ExecutionTime = 2 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.0724029e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.0724029e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 947 at location (0.9475 0.5 0.5)
+    max(p) = 1 in cell 23 at location (0.0235 0.5 0.5)
+    min(T) = 0.0024864745 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039533763 in cell 563 at location (0.5635 0.5 0.5)
+
+Time = 0.047
+
+Courant Number mean: 0.10085409 max: 0.94248373
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0044965715, Final residual = 3.208972e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037527587, Final residual = 3.2574662e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010271876, Final residual = 6.5367562e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1089943e-15, global = -8.1302536e-16, cumulative = -9.4746031e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00039278259, Final residual = 8.932908e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0012077234, Final residual = 3.4428713e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001682017, Final residual = 5.7863083e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0026983e-15, global = 2.4203064e-16, cumulative = -9.4743611e-12
+ExecutionTime = 2.04 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (2.0724468e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (2.0724468e-23 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 949 at location (0.9495 0.5 0.5)
+    max(p) = 1 in cell 19 at location (0.0195 0.5 0.5)
+    min(T) = 0.0024861536 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039535502 in cell 563 at location (0.5635 0.5 0.5)
+
+Time = 0.048
+
+Courant Number mean: 0.10303598 max: 0.94166719
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0044134655, Final residual = 2.907342e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0038301591, Final residual = 3.5862794e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010420756, Final residual = 6.4730515e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1084509e-15, global = -8.4537843e-16, cumulative = -9.4752065e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00037964473, Final residual = 5.6246662e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0011751288, Final residual = 3.6749457e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016660854, Final residual = 9.5140492e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.613554e-15, global = -3.6013171e-16, cumulative = -9.4755666e-12
+ExecutionTime = 2.08 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1090978e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1090978e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 948 at location (0.9485 0.5 0.5)
+    max(p) = 1 in cell 17 at location (0.0175 0.5 0.5)
+    min(T) = 0.0024858328 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039532151 in cell 565 at location (0.5655 0.5 0.5)
+
+Time = 0.049
+
+Courant Number mean: 0.10521911 max: 0.94042599
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0043276121, Final residual = 9.0127638e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0037754766, Final residual = 3.2628633e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010366791, Final residual = 6.6213615e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1410016e-15, global = -8.4108116e-16, cumulative = -9.4764077e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00037055094, Final residual = 7.5990399e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010686289, Final residual = 3.2157256e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001474502, Final residual = 5.4627981e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5063706e-16, global = 2.9853738e-16, cumulative = -9.4761091e-12
+ExecutionTime = 2.12 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-6.407755e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-6.407755e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 949 at location (0.9495 0.5 0.5)
+    max(p) = 1 in cell 34 at location (0.0345 0.5 0.5)
+    min(T) = 0.0024855739 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039530886 in cell 567 at location (0.5675 0.5 0.5)
+
+Time = 0.05
+
+Courant Number mean: 0.10740038 max: 0.94145014
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0042539447, Final residual = 3.0389899e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003701177, Final residual = 3.3384457e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010327791, Final residual = 6.4050595e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1035609e-15, global = -8.0166474e-16, cumulative = -9.4769108e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00037224188, Final residual = 2.1257275e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0011677332, Final residual = 3.4684546e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016474301, Final residual = 5.6785265e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7034527e-16, global = 3.4225108e-16, cumulative = -9.4765686e-12
+ExecutionTime = 2.17 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 953 at location (0.9535 0.5 0.5)
+    max(p) = 1 in cell 33 at location (0.0335 0.5 0.5)
+    min(T) = 0.0024853572 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039532961 in cell 567 at location (0.5675 0.5 0.5)
+
+Time = 0.051
+
+Courant Number mean: 0.10958092 max: 0.94298555
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0041766973, Final residual = 3.560302e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0038023933, Final residual = 3.3227927e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010423128, Final residual = 6.3347417e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0812348e-15, global = -7.8941502e-16, cumulative = -9.477358e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00036576137, Final residual = 7.9558581e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0011787131, Final residual = 3.3328625e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00016539751, Final residual = 6.2967609e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0777772e-15, global = 1.9876149e-16, cumulative = -9.4771592e-12
+ExecutionTime = 2.21 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 952 at location (0.9525 0.5 0.5)
+    max(p) = 1 in cell 29 at location (0.0295 0.5 0.5)
+    min(T) = 0.0024851685 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039529487 in cell 569 at location (0.5695 0.5 0.5)
+
+Time = 0.052
+
+Courant Number mean: 0.11176525 max: 0.94342305
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0041065891, Final residual = 2.914361e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0038167029, Final residual = 3.3625156e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010352156, Final residual = 6.423442e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0924967e-15, global = -7.7894349e-16, cumulative = -9.4779382e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00035468129, Final residual = 9.3341698e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010714615, Final residual = 3.4045922e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00015687812, Final residual = 5.5103516e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.4065947e-16, global = 3.0841618e-16, cumulative = -9.4776297e-12
+ExecutionTime = 2.25 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-7.5715546e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 785 at location (0.7855 0.5 0.5)
+    max(p) = 1 in cell 38 at location (0.0385 0.5 0.5)
+    min(T) = 0.0024850391 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039531895 in cell 571 at location (0.5715 0.5 0.5)
+
+Time = 0.053
+
+Courant Number mean: 0.11394676 max: 0.94179435
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0040378431, Final residual = 2.9189657e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003745294, Final residual = 3.3519689e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010262272, Final residual = 6.4084662e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0989673e-15, global = -8.1376627e-16, cumulative = -9.4784435e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00034006537, Final residual = 9.9945849e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.0010603122, Final residual = 3.2211215e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00014788594, Final residual = 5.4401203e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.3818977e-16, global = 3.2481499e-16, cumulative = -9.4781187e-12
+ExecutionTime = 2.3 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-8.6602447e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-8.6602447e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 784 at location (0.7845 0.5 0.5)
+    max(p) = 1 in cell 18 at location (0.0185 0.5 0.5)
+    min(T) = 0.0024848748 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039532374 in cell 573 at location (0.5735 0.5 0.5)
+
+Time = 0.054
+
+Courant Number mean: 0.11612929 max: 0.93653114
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0039789934, Final residual = 2.6899891e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037718328, Final residual = 3.398357e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001022246, Final residual = 6.4433814e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1059812e-15, global = -8.0754262e-16, cumulative = -9.4789262e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00033997232, Final residual = 9.6500483e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00098273981, Final residual = 3.5561712e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00014148201, Final residual = 5.4086367e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.2243309e-16, global = 3.3256985e-16, cumulative = -9.4785937e-12
+ExecutionTime = 2.34 s  ClockTime = 2 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-8.7980414e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-8.7980414e-22 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 968 at location (0.9685 0.5 0.5)
+    max(p) = 1 in cell 35 at location (0.0355 0.5 0.5)
+    min(T) = 0.0024846295 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039531022 in cell 573 at location (0.5735 0.5 0.5)
+
+Time = 0.055
+
+Courant Number mean: 0.11831344 max: 0.93588083
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0039138857, Final residual = 2.7021158e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036943071, Final residual = 3.2671915e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010217612, Final residual = 6.4549776e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1015851e-15, global = -8.0166474e-16, cumulative = -9.4793953e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00033429377, Final residual = 8.2658733e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00092491696, Final residual = 3.4057822e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013198692, Final residual = 5.8969735e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0025008e-15, global = 4.1984906e-16, cumulative = -9.4789755e-12
+ExecutionTime = 2.38 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.0087821e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.0087821e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 968 at location (0.9685 0.5 0.5)
+    max(p) = 1 in cell 29 at location (0.0295 0.5 0.5)
+    min(T) = 0.0024844292 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039531138 in cell 576 at location (0.5765 0.5 0.5)
+
+Time = 0.056
+
+Courant Number mean: 0.12049634 max: 0.93585145
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0038524494, Final residual = 2.5535828e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036839256, Final residual = 3.2107595e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010212518, Final residual = 6.4645576e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0994612e-15, global = -8.0843172e-16, cumulative = -9.4797839e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00032988753, Final residual = 8.4205318e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00099982524, Final residual = 3.2536638e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00014317152, Final residual = 5.6303861e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5745344e-16, global = 3.6462656e-16, cumulative = -9.4794193e-12
+ExecutionTime = 2.42 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.0199834e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.0199834e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 941 at location (0.9415 0.5 0.5)
+    max(p) = 1 in cell 25 at location (0.0255 0.5 0.5)
+    min(T) = 0.002484281 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.0039533629 in cell 577 at location (0.5775 0.5 0.5)
+
+Time = 0.057
+
+Courant Number mean: 0.12268302 max: 0.93534947
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0037985003, Final residual = 2.6559092e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0037187633, Final residual = 3.3038013e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001029388, Final residual = 6.4671289e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1031164e-15, global = -8.0744384e-16, cumulative = -9.4802267e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00032665091, Final residual = 2.1992512e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00096554659, Final residual = 3.5009953e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013977614, Final residual = 6.3199009e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0803457e-15, global = 5.0055887e-16, cumulative = -9.4797262e-12
+ExecutionTime = 2.46 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.0276296e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.0276296e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 967 at location (0.9675 0.5 0.5)
+    max(p) = 1 in cell 34 at location (0.0345 0.5 0.5)
+    min(T) = 0.0024841715 in cell 508 at location (0.5085 0.5 0.5)
+    max(T) = 0.003953142 in cell 577 at location (0.5775 0.5 0.5)
+
+Time = 0.058
+
+Courant Number mean: 0.124865 max: 0.93327848
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.003746815, Final residual = 2.8176123e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036692684, Final residual = 3.4583707e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010156474, Final residual = 6.5340208e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1030176e-15, global = -8.1139536e-16, cumulative = -9.4805376e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00032503626, Final residual = 9.9778044e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00092861867, Final residual = 3.5014739e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013410939, Final residual = 5.4460276e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.3186734e-16, global = 3.3953441e-16, cumulative = -9.480198e-12
+ExecutionTime = 2.51 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.033747e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.033747e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 964 at location (0.9645 0.5 0.5)
+    max(p) = 1 in cell 29 at location (0.0295 0.5 0.5)
+    min(T) = 0.0024840071 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.003953072 in cell 578 at location (0.5785 0.5 0.5)
+
+Time = 0.059
+
+Courant Number mean: 0.12704784 max: 0.93144218
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0036949298, Final residual = 2.5258073e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036634302, Final residual = 3.4910464e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010136686, Final residual = 6.5171478e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0999058e-15, global = -8.1391445e-16, cumulative = -9.4810119e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00031663008, Final residual = 2.1442419e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00093870287, Final residual = 3.3036631e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013356148, Final residual = 5.3820794e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.1670338e-16, global = 3.5637776e-16, cumulative = -9.4806556e-12
+ExecutionTime = 2.55 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1633498e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1633498e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 963 at location (0.9635 0.5 0.5)
+    max(p) = 1 in cell 33 at location (0.0335 0.5 0.5)
+    min(T) = 0.002483772 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039526835 in cell 578 at location (0.5785 0.5 0.5)
+
+Time = 0.06
+
+Courant Number mean: 0.12923153 max: 0.93016206
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0036421917, Final residual = 2.6272594e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036468363, Final residual = 3.4591537e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001012136, Final residual = 6.575386e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.104697e-15, global = -8.1218566e-16, cumulative = -9.4814678e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00031352283, Final residual = 7.0707276e-16, No Iterations 15
+smoothSolver:  Solving for e, Initial residual = 0.00094514636, Final residual = 3.464122e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00013661248, Final residual = 5.3094284e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.0065033e-16, global = 3.4437502e-16, cumulative = -9.4811234e-12
+ExecutionTime = 2.59 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1633502e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1633502e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 962 at location (0.9625 0.5 0.5)
+    max(p) = 1 in cell 32 at location (0.0325 0.5 0.5)
+    min(T) = 0.0024835486 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.003952595 in cell 581 at location (0.5815 0.5 0.5)
+
+Time = 0.061
+
+Courant Number mean: 0.13141568 max: 0.92929009
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0035900226, Final residual = 2.5729143e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036931309, Final residual = 3.4683354e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010170721, Final residual = 6.5747013e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0981276e-15, global = -8.0057807e-16, cumulative = -9.481924e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00030806552, Final residual = 2.6570171e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0009208124, Final residual = 3.5974145e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012460191, Final residual = 5.3718188e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.1443126e-16, global = 3.3701531e-16, cumulative = -9.4815869e-12
+ExecutionTime = 2.64 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1620283e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1620283e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 776 at location (0.7765 0.5 0.5)
+    max(p) = 1 in cell 29 at location (0.0295 0.5 0.5)
+    min(T) = 0.0024833453 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039525484 in cell 583 at location (0.5835 0.5 0.5)
+
+Time = 0.062
+
+Courant Number mean: 0.13360284 max: 0.92860512
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0035413982, Final residual = 2.6692206e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.003635012, Final residual = 3.4272701e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010081374, Final residual = 6.6036556e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1079076e-15, global = -8.2231143e-16, cumulative = -9.4824093e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00030258575, Final residual = 4.1426393e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00086120572, Final residual = 3.4362454e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012656891, Final residual = 5.5160117e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.3097825e-16, global = 3.8724902e-16, cumulative = -9.482022e-12
+ExecutionTime = 2.68 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1620278e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1620278e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 684 at location (0.6845 0.5 0.5)
+    max(p) = 1 in cell 30 at location (0.0305 0.5 0.5)
+    min(T) = 0.0024831249 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039524442 in cell 583 at location (0.5835 0.5 0.5)
+
+Time = 0.063
+
+Courant Number mean: 0.13578716 max: 0.92798026
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0034911104, Final residual = 4.8504403e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036820043, Final residual = 3.594835e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010106994, Final residual = 6.6083712e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1075618e-15, global = -8.2759659e-16, cumulative = -9.4828496e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00029522613, Final residual = 4.1239564e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00085478133, Final residual = 3.573119e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012150806, Final residual = 5.6464264e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.503407e-16, global = 4.1826845e-16, cumulative = -9.4824313e-12
+ExecutionTime = 2.72 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1620278e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1620278e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 774 at location (0.7745 0.5 0.5)
+    max(p) = 1 in cell 31 at location (0.0315 0.5 0.5)
+    min(T) = 0.0024828775 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039523347 in cell 584 at location (0.5845 0.5 0.5)
+
+Time = 0.064
+
+Courant Number mean: 0.13797385 max: 0.92747072
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0034477298, Final residual = 5.311594e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036569456, Final residual = 3.2136046e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010092205, Final residual = 6.676863e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.112847e-15, global = -8.2636174e-16, cumulative = -9.4832577e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00029376785, Final residual = 3.0732364e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00085330919, Final residual = 3.4592118e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012326127, Final residual = 5.6232867e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.4090644e-16, global = 3.5212988e-16, cumulative = -9.4829056e-12
+ExecutionTime = 2.76 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.172233e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.172233e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 687 at location (0.6875 0.5 0.5)
+    max(p) = 1 in cell 3 at location (0.0035 0.5 0.5)
+    min(T) = 0.0024826628 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039522068 in cell 586 at location (0.5865 0.5 0.5)
+
+Time = 0.065
+
+Courant Number mean: 0.14015878 max: 0.92736264
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0033994146, Final residual = 8.4593163e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036671171, Final residual = 3.3553916e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010128754, Final residual = 6.5684899e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1061788e-15, global = -8.1169172e-16, cumulative = -9.4837173e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00028701525, Final residual = 2.9201253e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00078644145, Final residual = 3.5217236e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011131894, Final residual = 5.4219015e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.1378913e-16, global = 3.7786416e-16, cumulative = -9.4833394e-12
+ExecutionTime = 2.8 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 774 at location (0.7745 0.5 0.5)
+    max(p) = 1 in cell 40 at location (0.0405 0.5 0.5)
+    min(T) = 0.00248252 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039522135 in cell 589 at location (0.5895 0.5 0.5)
+
+Time = 0.066
+
+Courant Number mean: 0.14234465 max: 0.92736401
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0033606301, Final residual = 9.7705711e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036118558, Final residual = 3.5169854e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010053133, Final residual = 6.6342241e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1138843e-15, global = -8.3095538e-16, cumulative = -9.4841703e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00028465899, Final residual = 3.8267152e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00085136862, Final residual = 3.4327992e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012591608, Final residual = 7.976222e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.3344779e-15, global = 7.6684196e-16, cumulative = -9.4834035e-12
+ExecutionTime = 2.85 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 773 at location (0.7735 0.5 0.5)
+    max(p) = 1 in cell 43 at location (0.0435 0.5 0.5)
+    min(T) = 0.0024823778 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039523148 in cell 591 at location (0.5915 0.5 0.5)
+
+Time = 0.067
+
+Courant Number mean: 0.14453065 max: 0.92730864
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0033168111, Final residual = 9.7490073e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036705636, Final residual = 3.399486e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010168491, Final residual = 6.7195584e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1134397e-15, global = -8.3090599e-16, cumulative = -9.4842344e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00027489578, Final residual = 2.9966064e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00080858402, Final residual = 3.6524625e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001153403, Final residual = 4.2575507e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.2500524e-16, global = 4.3506242e-16, cumulative = -9.4837993e-12
+ExecutionTime = 2.9 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1722338e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 855 at location (0.8555 0.5 0.5)
+    max(p) = 1 in cell 38 at location (0.0385 0.5 0.5)
+    min(T) = 0.0024822787 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039523392 in cell 591 at location (0.5915 0.5 0.5)
+
+Time = 0.068
+
+Courant Number mean: 0.14671778 max: 0.92731145
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0032751524, Final residual = 7.4267894e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036521117, Final residual = 3.6122678e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010125914, Final residual = 6.6867409e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1031164e-15, global = -8.2542325e-16, cumulative = -9.4846248e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00027065073, Final residual = 3.2645623e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00082121761, Final residual = 3.5833659e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011880808, Final residual = 5.5403774e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.1685156e-16, global = 3.8181568e-16, cumulative = -9.484243e-12
+ExecutionTime = 2.94 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.172234e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.172234e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 848 at location (0.8485 0.5 0.5)
+    max(p) = 1 in cell 40 at location (0.0405 0.5 0.5)
+    min(T) = 0.0024821742 in cell 509 at location (0.5095 0.5 0.5)
+    max(T) = 0.0039522639 in cell 591 at location (0.5915 0.5 0.5)
+
+Time = 0.069
+
+Courant Number mean: 0.14890561 max: 0.92726728
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0032350705, Final residual = 2.1334941e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036341563, Final residual = 3.5740845e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010111076, Final residual = 6.706768e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1133903e-15, global = -8.5525724e-16, cumulative = -9.4850982e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002684389, Final residual = 3.6941328e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077627727, Final residual = 3.5383004e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011208531, Final residual = 5.3767924e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.0845458e-16, global = 3.4961078e-16, cumulative = -9.4847486e-12
+ExecutionTime = 2.98 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.172234e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.172234e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 849 at location (0.8495 0.5 0.5)
+    max(p) = 1 in cell 312 at location (0.3125 0.5 0.5)
+    min(T) = 0.002482038 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039521485 in cell 591 at location (0.5915 0.5 0.5)
+
+Time = 0.07
+
+Courant Number mean: 0.15109325 max: 0.92728664
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0032014118, Final residual = 2.2259744e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036138897, Final residual = 3.6614526e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010096921, Final residual = 6.6977849e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1069197e-15, global = -8.3021447e-16, cumulative = -9.4855788e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00026884706, Final residual = 3.5090215e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00081111856, Final residual = 3.513434e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012021952, Final residual = 5.309582e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9324123e-16, global = 3.4210289e-16, cumulative = -9.4852367e-12
+ExecutionTime = 3.02 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.1516228e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.1516228e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 848 at location (0.8485 0.5 0.5)
+    max(p) = 1 in cell 36 at location (0.0365 0.5 0.5)
+    min(T) = 0.0024819086 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.003952022 in cell 592 at location (0.5925 0.5 0.5)
+
+Time = 0.071
+
+Courant Number mean: 0.15328109 max: 0.9272836
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0031680942, Final residual = 9.8309246e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036798942, Final residual = 3.410387e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001016396, Final residual = 6.7044311e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1084509e-15, global = -8.2897962e-16, cumulative = -9.4860657e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00026692088, Final residual = 4.678363e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00075499909, Final residual = 3.3825285e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011031142, Final residual = 5.3757122e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9452547e-16, global = 3.4882048e-16, cumulative = -9.4857169e-12
+ExecutionTime = 3.07 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.516087e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.516087e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 848 at location (0.8485 0.5 0.5)
+    max(p) = 1 in cell 312 at location (0.3125 0.5 0.5)
+    min(T) = 0.0024817456 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039519019 in cell 592 at location (0.5925 0.5 0.5)
+
+Time = 0.072
+
+Courant Number mean: 0.15546767 max: 0.92725215
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.003137175, Final residual = 2.2338726e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036533046, Final residual = 3.5878283e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010177853, Final residual = 6.754814e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.117243e-15, global = -8.3619115e-16, cumulative = -9.4865531e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00026676065, Final residual = 2.3261742e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00081204722, Final residual = 3.5828931e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011940815, Final residual = 7.6208339e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2621651e-15, global = 7.1102673e-16, cumulative = -9.485842e-12
+ExecutionTime = 3.11 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-1.7065226e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-1.7065226e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 983 at location (0.9835 0.5 0.5)
+    max(p) = 1 in cell 313 at location (0.3135 0.5 0.5)
+    min(T) = 0.0024815949 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039516985 in cell 595 at location (0.5955 0.5 0.5)
+
+Time = 0.073
+
+Courant Number mean: 0.1576548 max: 0.92724868
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0031016373, Final residual = 6.9769973e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036556428, Final residual = 3.524896e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010175169, Final residual = 6.7125736e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1111676e-15, global = -8.4187146e-16, cumulative = -9.4866839e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00026187579, Final residual = 3.1723026e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076961827, Final residual = 3.5706684e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001123433, Final residual = 4.1530003e-16, No Iterations 18
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.1487947e-16, global = 4.2918453e-16, cumulative = -9.4862547e-12
+ExecutionTime = 3.15 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.099552e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.099552e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 852 at location (0.8525 0.5 0.5)
+    max(p) = 1 in cell 38 at location (0.0385 0.5 0.5)
+    min(T) = 0.0024814692 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039517294 in cell 597 at location (0.5975 0.5 0.5)
+
+Time = 0.074
+
+Courant Number mean: 0.15984131 max: 0.92726107
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0030699081, Final residual = 7.5147834e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036170678, Final residual = 3.6467219e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010174666, Final residual = 6.8151715e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1041536e-15, global = -8.4473631e-16, cumulative = -9.4870995e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00026106367, Final residual = 4.5476212e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00079898742, Final residual = 3.5557135e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011731597, Final residual = 5.8982764e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7661831e-16, global = 4.6193276e-16, cumulative = -9.4866375e-12
+ExecutionTime = 3.2 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.099552e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.099552e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 695 at location (0.6955 0.5 0.5)
+    max(p) = 1 in cell 42 at location (0.0425 0.5 0.5)
+    min(T) = 0.0024813335 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039517998 in cell 597 at location (0.5975 0.5 0.5)
+
+Time = 0.075
+
+Courant Number mean: 0.16202812 max: 0.92727244
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0030351639, Final residual = 7.9895463e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036272048, Final residual = 3.5046141e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010212552, Final residual = 6.7666386e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1190212e-15, global = -8.2937478e-16, cumulative = -9.4874669e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00025514408, Final residual = 4.3783285e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0007819591, Final residual = 3.4820468e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011378023, Final residual = 5.6846548e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.4500615e-16, global = 4.3002423e-16, cumulative = -9.4870369e-12
+ExecutionTime = 3.24 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1013311e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1013311e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 697 at location (0.6975 0.5 0.5)
+    max(p) = 1 in cell 40 at location (0.0405 0.5 0.5)
+    min(T) = 0.0024812033 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039518599 in cell 599 at location (0.5995 0.5 0.5)
+
+Time = 0.076
+
+Courant Number mean: 0.16421561 max: 0.92727182
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.003005153, Final residual = 2.1774244e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036247818, Final residual = 3.435983e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010230112, Final residual = 6.7234493e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1216391e-15, global = -8.5352844e-16, cumulative = -9.4878904e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00025322685, Final residual = 4.2146902e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00080278093, Final residual = 3.5673118e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011853173, Final residual = 6.2951722e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0411269e-15, global = 5.283183e-16, cumulative = -9.4873621e-12
+ExecutionTime = 3.28 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1013315e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1013315e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 697 at location (0.6975 0.5 0.5)
+    max(p) = 1 in cell 24 at location (0.0245 0.5 0.5)
+    min(T) = 0.0024810456 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039519293 in cell 599 at location (0.5995 0.5 0.5)
+
+Time = 0.077
+
+Courant Number mean: 0.16640306 max: 0.92723921
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0029710052, Final residual = 7.9378824e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036634956, Final residual = 3.5338773e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010264414, Final residual = 6.8008936e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1105255e-15, global = -8.4972511e-16, cumulative = -9.4882118e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00024899506, Final residual = 4.0445506e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076703166, Final residual = 3.4871301e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011341311, Final residual = 5.7223541e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5982435e-16, global = 4.3219756e-16, cumulative = -9.4877796e-12
+ExecutionTime = 3.32 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1013315e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1013315e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 979 at location (0.9795 0.5 0.5)
+    max(p) = 1 in cell 310 at location (0.3105 0.5 0.5)
+    min(T) = 0.0024808886 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039519423 in cell 601 at location (0.6015 0.5 0.5)
+
+Time = 0.078
+
+Courant Number mean: 0.16858977 max: 0.92724063
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0029454567, Final residual = 7.2609409e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036176694, Final residual = 3.5652249e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010222598, Final residual = 6.853449e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1131433e-15, global = -8.5589936e-16, cumulative = -9.4886355e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00025116566, Final residual = 4.7036594e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00079505405, Final residual = 3.5271918e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012067427, Final residual = 5.9948179e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.9464712e-16, global = 4.8262884e-16, cumulative = -9.4881529e-12
+ExecutionTime = 3.36 s  ClockTime = 3 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.101332e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.101332e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 883 at location (0.8835 0.5 0.5)
+    max(p) = 1 in cell 44 at location (0.0445 0.5 0.5)
+    min(T) = 0.0024807445 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039519512 in cell 601 at location (0.6015 0.5 0.5)
+
+Time = 0.079
+
+Courant Number mean: 0.1707773 max: 0.92719955
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0029128094, Final residual = 7.5459147e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036506707, Final residual = 3.3275562e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010331229, Final residual = 6.7996957e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1200585e-15, global = -8.4997208e-16, cumulative = -9.4890029e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002432635, Final residual = 3.5799288e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00074973183, Final residual = 3.423406e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011266655, Final residual = 6.0927443e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0013153e-15, global = 4.5916669e-16, cumulative = -9.4885437e-12
+ExecutionTime = 3.41 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.101332e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.101332e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 699 at location (0.6995 0.5 0.5)
+    max(p) = 1 in cell 50 at location (0.0505 0.5 0.5)
+    min(T) = 0.0024806304 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039519416 in cell 603 at location (0.6035 0.5 0.5)
+
+Time = 0.08
+
+Courant Number mean: 0.17296376 max: 0.92716114
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0028869238, Final residual = 6.9571381e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0036074979, Final residual = 3.5483195e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010245047, Final residual = 6.8820059e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1244052e-15, global = -8.4661328e-16, cumulative = -9.4893903e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00024532749, Final residual = 5.9970656e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077592897, Final residual = 3.5153516e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011807572, Final residual = 6.082371e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.0136638e-15, global = 4.9631098e-16, cumulative = -9.488894e-12
+ExecutionTime = 3.45 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1013318e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1013318e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 917 at location (0.9175 0.5 0.5)
+    max(p) = 1 in cell 31 at location (0.0315 0.5 0.5)
+    min(T) = 0.0024805467 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.0039518982 in cell 603 at location (0.6035 0.5 0.5)
+
+Time = 0.081
+
+Courant Number mean: 0.17515134 max: 0.92712708
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0028610171, Final residual = 2.3809498e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.003626889, Final residual = 3.4292744e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010334831, Final residual = 6.9511144e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1168479e-15, global = -8.3954994e-16, cumulative = -9.4897335e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00024316944, Final residual = 4.1108137e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077347999, Final residual = 3.5348832e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001168982, Final residual = 5.5191304e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.2663158e-16, global = 4.2221997e-16, cumulative = -9.4893113e-12
+ExecutionTime = 3.49 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1013318e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1013318e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 706 at location (0.7065 0.5 0.5)
+    max(p) = 1 in cell 45 at location (0.0455 0.5 0.5)
+    min(T) = 0.0024804857 in cell 510 at location (0.5105 0.5 0.5)
+    max(T) = 0.003951821 in cell 605 at location (0.6055 0.5 0.5)
+
+Time = 0.082
+
+Courant Number mean: 0.17733925 max: 0.927116
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0028331597, Final residual = 4.1229822e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036285019, Final residual = 3.6317028e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010336808, Final residual = 6.9893252e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1396185e-15, global = -8.5550421e-16, cumulative = -9.4901668e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002375655, Final residual = 5.1792155e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00078191995, Final residual = 3.3355469e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011873427, Final residual = 5.4183508e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.0208275e-16, global = 3.9006448e-16, cumulative = -9.4897768e-12
+ExecutionTime = 3.53 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1019321e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1019321e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 917 at location (0.9175 0.5 0.5)
+    max(p) = 1 in cell 28 at location (0.0285 0.5 0.5)
+    min(T) = 0.0024803695 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039517606 in cell 605 at location (0.6055 0.5 0.5)
+
+Time = 0.083
+
+Courant Number mean: 0.17952657 max: 0.92711963
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0028074646, Final residual = 3.2500512e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036243055, Final residual = 3.4683227e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010345815, Final residual = 6.9580919e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1217379e-15, global = -8.3861145e-16, cumulative = -9.4906154e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00023496555, Final residual = 5.1239935e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00078322933, Final residual = 3.7921595e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011809423, Final residual = 5.4469884e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.8425152e-16, global = 3.6768899e-16, cumulative = -9.4902477e-12
+ExecutionTime = 3.58 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1199524e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1199524e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 915 at location (0.9155 0.5 0.5)
+    max(p) = 1 in cell 27 at location (0.0275 0.5 0.5)
+    min(T) = 0.0024803279 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039517554 in cell 608 at location (0.6085 0.5 0.5)
+
+Time = 0.084
+
+Courant Number mean: 0.18171443 max: 0.92708227
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0027811003, Final residual = 3.8110203e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036429833, Final residual = 3.6944369e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010389196, Final residual = 6.9429084e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1353707e-15, global = -8.5708481e-16, cumulative = -9.4911048e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00023368441, Final residual = 5.9173001e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077790049, Final residual = 3.4230024e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011640706, Final residual = 5.2914342e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.6271573e-16, global = 3.7707385e-16, cumulative = -9.4907277e-12
+ExecutionTime = 3.62 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1199524e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1199524e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 917 at location (0.9175 0.5 0.5)
+    max(p) = 1 in cell 27 at location (0.0275 0.5 0.5)
+    min(T) = 0.00248024 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.003951827 in cell 610 at location (0.6105 0.5 0.5)
+
+Time = 0.085
+
+Courant Number mean: 0.18390166 max: 0.92706886
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0027580437, Final residual = 4.102203e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036358088, Final residual = 3.623291e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.001037392, Final residual = 6.9327201e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1196634e-15, global = -8.4690965e-16, cumulative = -9.4915746e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00023119754, Final residual = 5.2393753e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077949472, Final residual = 3.6343859e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011927351, Final residual = 5.4640073e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9072213e-16, global = 3.8018567e-16, cumulative = -9.4911944e-12
+ExecutionTime = 3.66 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1369423e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1369423e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 915 at location (0.9155 0.5 0.5)
+    max(p) = 1 in cell 24 at location (0.0245 0.5 0.5)
+    min(T) = 0.002480176 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039519142 in cell 610 at location (0.6105 0.5 0.5)
+
+Time = 0.086
+
+Courant Number mean: 0.18608961 max: 0.92707777
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0027333147, Final residual = 3.6844357e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036453705, Final residual = 3.5638344e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010416074, Final residual = 6.8872392e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.122627e-15, global = -8.4957692e-16, cumulative = -9.492044e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002293094, Final residual = 5.3714454e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076325737, Final residual = 3.6066821e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011602868, Final residual = 5.3452144e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.6469149e-16, global = 3.7035627e-16, cumulative = -9.4916736e-12
+ExecutionTime = 3.7 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1864256e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1864256e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 914 at location (0.9145 0.5 0.5)
+    max(p) = 1 in cell 29 at location (0.0295 0.5 0.5)
+    min(T) = 0.0024800424 in cell 514 at location (0.5145 0.5 0.5)
+    max(T) = 0.0039519921 in cell 610 at location (0.6105 0.5 0.5)
+
+Time = 0.087
+
+Courant Number mean: 0.1882773 max: 0.92711402
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0027116824, Final residual = 2.7244052e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036331736, Final residual = 3.4423994e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010455844, Final residual = 6.8853933e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1182803e-15, global = -8.5165147e-16, cumulative = -9.4925253e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00022795091, Final residual = 5.3261415e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076939861, Final residual = 3.6625144e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011851074, Final residual = 5.6266391e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9580972e-16, global = 4.4148364e-16, cumulative = -9.4920838e-12
+ExecutionTime = 3.75 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1864247e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1864247e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 990 at location (0.9905 0.5 0.5)
+    max(p) = 1 in cell 28 at location (0.0285 0.5 0.5)
+    min(T) = 0.0024800025 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520281 in cell 612 at location (0.6125 0.5 0.5)
+
+Time = 0.088
+
+Courant Number mean: 0.19046531 max: 0.92707567
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0026902788, Final residual = 2.8211719e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036386094, Final residual = 3.5382029e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010459955, Final residual = 7.1211921e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.130777e-15, global = -8.6148088e-16, cumulative = -9.4929453e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00022908425, Final residual = 5.5525298e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077683169, Final residual = 3.4744171e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011861803, Final residual = 5.5551268e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.0445367e-16, global = 4.0261055e-16, cumulative = -9.4925427e-12
+ExecutionTime = 3.79 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.1864243e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.1864243e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 991 at location (0.9915 0.5 0.5)
+    max(p) = 1 in cell 33 at location (0.0335 0.5 0.5)
+    min(T) = 0.0024797333 in cell 516 at location (0.5165 0.5 0.5)
+    max(T) = 0.0039520101 in cell 612 at location (0.6125 0.5 0.5)
+
+Time = 0.089
+
+Courant Number mean: 0.19265317 max: 0.92713706
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0026667963, Final residual = 3.7610678e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036374014, Final residual = 3.5569129e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010459783, Final residual = 7.0186616e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1429279e-15, global = -8.5031783e-16, cumulative = -9.493393e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00022635324, Final residual = 5.3008301e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076603155, Final residual = 3.5552025e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011692228, Final residual = 5.6464964e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.1270247e-16, global = 4.0512965e-16, cumulative = -9.4929879e-12
+ExecutionTime = 3.83 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.2148011e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.2148011e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 988 at location (0.9885 0.5 0.5)
+    max(p) = 1 in cell 32 at location (0.0325 0.5 0.5)
+    min(T) = 0.0024798607 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039519925 in cell 614 at location (0.6145 0.5 0.5)
+
+Time = 0.09
+
+Courant Number mean: 0.19484054 max: 0.92703789
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0026458814, Final residual = 3.606191e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036074664, Final residual = 3.4021757e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010445851, Final residual = 7.0494184e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1290976e-15, global = -8.8222636e-16, cumulative = -9.4938701e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00022352796, Final residual = 5.2372936e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.000769603, Final residual = 3.64723e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011765838, Final residual = 5.7236517e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.2332218e-16, global = 4.1732997e-16, cumulative = -9.4934528e-12
+ExecutionTime = 3.87 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.2148009e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.2148009e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 994 at location (0.9945 0.5 0.5)
+    max(p) = 1 in cell 37 at location (0.0375 0.5 0.5)
+    min(T) = 0.0024797966 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039519966 in cell 617 at location (0.6175 0.5 0.5)
+
+Time = 0.091
+
+Courant Number mean: 0.19702819 max: 0.92702237
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0026228929, Final residual = 3.6339541e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036443553, Final residual = 3.6050852e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010541832, Final residual = 7.0981885e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.13868e-15, global = -8.6721058e-16, cumulative = -9.49432e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021804872, Final residual = 5.1323334e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077823078, Final residual = 3.5340906e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011809349, Final residual = 6.0121521e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.6999951e-16, global = 4.8919825e-16, cumulative = -9.4938308e-12
+ExecutionTime = 3.92 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.2929288e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.2929288e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 992 at location (0.9925 0.5 0.5)
+    max(p) = 1 in cell 33 at location (0.0335 0.5 0.5)
+    min(T) = 0.0024797311 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520034 in cell 617 at location (0.6175 0.5 0.5)
+
+Time = 0.092
+
+Courant Number mean: 0.19921615 max: 0.92699474
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0026032547, Final residual = 3.5842232e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036158546, Final residual = 3.5771009e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010509774, Final residual = 7.0633343e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1199103e-15, global = -8.6325906e-16, cumulative = -9.494694e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021691962, Final residual = 4.9466486e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00078134385, Final residual = 3.4559399e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012148033, Final residual = 6.2046867e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.7968074e-16, global = 4.9156916e-16, cumulative = -9.4942025e-12
+ExecutionTime = 3.96 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.3011284e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.3011284e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 993 at location (0.9935 0.5 0.5)
+    max(p) = 1 in cell 32 at location (0.0325 0.5 0.5)
+    min(T) = 0.0024796736 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520179 in cell 617 at location (0.6175 0.5 0.5)
+
+Time = 0.093
+
+Courant Number mean: 0.2014041 max: 0.92696979
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0025798836, Final residual = 3.3170132e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036331811, Final residual = 3.6103839e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010564427, Final residual = 7.0880186e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1296903e-15, global = -8.4458813e-16, cumulative = -9.4950471e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021537185, Final residual = 5.4376776e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00074959331, Final residual = 3.577665e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011520347, Final residual = 5.3972707e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.6656846e-16, global = 3.7885204e-16, cumulative = -9.4946682e-12
+ExecutionTime = 4 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.3576301e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.3576301e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 705 at location (0.7055 0.5 0.5)
+    max(p) = 1 in cell 30 at location (0.0305 0.5 0.5)
+    min(T) = 0.0024796236 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520185 in cell 619 at location (0.6195 0.5 0.5)
+
+Time = 0.094
+
+Courant Number mean: 0.20359175 max: 0.92695111
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0025628225, Final residual = 3.3068854e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036022769, Final residual = 3.622131e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010514182, Final residual = 7.0803955e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1366549e-15, global = -8.4839147e-16, cumulative = -9.4955166e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021659163, Final residual = 5.78143e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00074991372, Final residual = 3.7076305e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011654656, Final residual = 5.5073255e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.9284607e-16, global = 4.1777451e-16, cumulative = -9.4950988e-12
+ExecutionTime = 4.05 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4317455e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4317455e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 708 at location (0.7085 0.5 0.5)
+    max(p) = 1 in cell 34 at location (0.0345 0.5 0.5)
+    min(T) = 0.0024795826 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520126 in cell 619 at location (0.6195 0.5 0.5)
+
+Time = 0.095
+
+Courant Number mean: 0.20578031 max: 0.92693706
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0025417414, Final residual = 3.0370986e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036166506, Final residual = 3.5965863e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010599754, Final residual = 7.2353825e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1412485e-15, global = -8.5535602e-16, cumulative = -9.4959542e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021342285, Final residual = 5.3125616e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076789192, Final residual = 3.6401101e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012087702, Final residual = 5.357449e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.6414816e-16, global = 3.881875e-16, cumulative = -9.495566e-12
+ExecutionTime = 4.1 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4576496e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4576496e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 998 at location (0.9985 0.5 0.5)
+    max(p) = 1 in cell 30 at location (0.0305 0.5 0.5)
+    min(T) = 0.0024795606 in cell 511 at location (0.5115 0.5 0.5)
+    max(T) = 0.0039520401 in cell 622 at location (0.6225 0.5 0.5)
+
+Time = 0.096
+
+Courant Number mean: 0.20796848 max: 0.92691523
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.002525679, Final residual = 3.9898848e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036166498, Final residual = 3.7804242e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010567434, Final residual = 7.1582949e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1264797e-15, global = -8.5184905e-16, cumulative = -9.4964178e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021462477, Final residual = 5.4242496e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.0007361057, Final residual = 3.4494143e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0001171055, Final residual = 5.2413811e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.5105874e-16, global = 3.5919322e-16, cumulative = -9.4960586e-12
+ExecutionTime = 4.14 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 999 at location (0.9995 0.5 0.5)
+    max(p) = 1 in cell 67 at location (0.0675 0.5 0.5)
+    min(T) = 0.0024795248 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039520743 in cell 622 at location (0.6225 0.5 0.5)
+
+Time = 0.097
+
+Courant Number mean: 0.21015629 max: 0.92691099
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0025035017, Final residual = 3.8441206e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.003629052, Final residual = 3.4337777e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010672349, Final residual = 7.1673934e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1405076e-15, global = -8.7170544e-16, cumulative = -9.4969304e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00020999315, Final residual = 4.9444877e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076760713, Final residual = 3.4840858e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012064298, Final residual = 5.3114904e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.4221722e-16, global = 3.8058083e-16, cumulative = -9.4965498e-12
+ExecutionTime = 4.18 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 998 at location (0.9985 0.5 0.5)
+    max(p) = 1 in cell 68 at location (0.0685 0.5 0.5)
+    min(T) = 0.0024794795 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039520658 in cell 623 at location (0.6235 0.5 0.5)
+
+Time = 0.098
+
+Courant Number mean: 0.21234466 max: 0.9268871
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0024888365, Final residual = 4.1371018e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036184053, Final residual = 3.5990826e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010613496, Final residual = 7.1930277e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1282579e-15, global = -8.6291331e-16, cumulative = -9.4974127e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00021039325, Final residual = 5.8149731e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00077557476, Final residual = 3.4784323e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012090272, Final residual = 5.31736e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.4083419e-16, global = 4.00536e-16, cumulative = -9.4970121e-12
+ExecutionTime = 4.22 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4736081e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 999 at location (0.9995 0.5 0.5)
+    max(p) = 1 in cell 69 at location (0.0695 0.5 0.5)
+    min(T) = 0.0024794503 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039520617 in cell 624 at location (0.6245 0.5 0.5)
+
+Time = 0.099
+
+Courant Number mean: 0.21453276 max: 0.92686829
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0024682888, Final residual = 4.2414243e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0036042418, Final residual = 3.5938273e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010674366, Final residual = 7.2547238e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1412979e-15, global = -8.6281452e-16, cumulative = -9.497875e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.00020511047, Final residual = 5.0188441e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00075698416, Final residual = 3.6186471e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00011801787, Final residual = 5.2519354e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.4048843e-16, global = 3.6551565e-16, cumulative = -9.4975094e-12
+ExecutionTime = 4.26 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4736089e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4736089e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 999 at location (0.9995 0.5 0.5)
+    max(p) = 1 in cell 71 at location (0.0715 0.5 0.5)
+    min(T) = 0.0024794251 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039520379 in cell 625 at location (0.6255 0.5 0.5)
+
+Time = 0.1
+
+Courant Number mean: 0.21672067 max: 0.926859
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+PIMPLE: iteration 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0024532363, Final residual = 4.6023309e-16, No Iterations 17
+smoothSolver:  Solving for e, Initial residual = 0.0035880783, Final residual = 3.7156197e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.0010631126, Final residual = 7.2343759e-16, No Iterations 19
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.1379391e-15, global = -8.638024e-16, cumulative = -9.4983732e-12
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002060326, Final residual = 6.1080835e-16, No Iterations 16
+smoothSolver:  Solving for e, Initial residual = 0.00076914663, Final residual = 3.585857e-11, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = 0.00012182785, Final residual = 5.3579705e-16, No Iterations 17
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.6508664e-16, global = 3.9307751e-16, cumulative = -9.4979802e-12
+ExecutionTime = 4.31 s  ClockTime = 4 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (-2.4736089e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    max(U) = (-2.4736089e-21 0 0) in cell 0 at location (0.0005 0.5 0.5)
+    min(p) = 0.1 in cell 999 at location (0.9995 0.5 0.5)
+    max(p) = 1 in cell 72 at location (0.0725 0.5 0.5)
+    min(T) = 0.002479394 in cell 512 at location (0.5125 0.5 0.5)
+    max(T) = 0.0039520258 in cell 627 at location (0.6275 0.5 0.5)
+
+End
+

@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0.1/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    minmaxdomain
+    {
+        vector
+        {
+            min(U)          ( -2.4736089e-21 0 0 );
+            min(U)_position ( 0.0005 0.5 0.5 );
+            max(U)          ( -2.4736089e-21 0 0 );
+            max(U)_position ( 0.0005 0.5 0.5 );
+            min(p)_position ( 0.9995000000000001 0.5 0.5 );
+            max(p)_position ( 0.0725 0.5 0.5 );
+            min(T)_position ( 0.5125 0.5 0.5 );
+            max(T)_position ( 0.6274999999999999 0.5 0.5 );
+        }
+        label
+        {
+            min(U)_cell     0;
+            min(U)_processor 0;
+            max(U)_cell     0;
+            max(U)_processor 0;
+            min(p)_cell     999;
+            min(p)_processor 0;
+            max(p)_cell     72;
+            max(p)_processor 0;
+            min(T)_cell     512;
+            min(T)_processor 0;
+            max(T)_cell     627;
+            max(T)_processor 0;
+        }
+        scalar
+        {
+            min(p)          0.09999999997358923;
+            max(p)          1.000000000071976;
+            min(T)          0.002479393982270778;
+            max(T)          0.003952025837520241;
+        }
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,21 @@
+send2trash 0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09
+
+cp -r 0_org/ 0
+
+setFields
+
+sonicFoam | tee sonicFoam.log
+
+postProcess -func 'mag(U)' 
+
+postProcess -func 'components(U)' 
+
+postProcess -func sampleDict
+
+cp -r postProcessing/sampleDict/0.1/ postProcessing/sampleDict/0.1_Euler_upwind
+
+cd python
+
+python3 sodshocktube.py 
+
+open vel_mag.png

@@ -1,0 +1,96 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0.200001";
+    object      wallShearStress;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    fuselage
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    strake
+    {
+        type            calculated;
+        value           uniform (0 0 -0);
+    }
+    wing
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    vertical-tail
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    horizontal-tail
+    {
+        type            calculated;
+        value           uniform (0 0 -0);
+    }
+    intake
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    intake-ramp
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    exhaust
+    {
+        type            calculated;
+        value           uniform (-0 0 0);
+    }
+    symmetry
+    {
+        type            symmetry;
+    }
+    side
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    downstream
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    upper
+    {
+        type            calculated;
+        value           uniform (-0 -0 0);
+    }
+    lower
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    upstream
+    {
+        type            calculated;
+        value           uniform (0 -0 -0);
+    }
+}
+
+
+// ************************************************************************* //

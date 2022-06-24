@@ -1,0 +1,25 @@
+#How to run me:
+
+
+
+foamCleanTutorials
+
+blockMesh
+
+checkMesh
+
+rm -rf 0
+
+cp -r 0_org/ 0
+
+setFields
+
+sonicFoam
+
+postProcess -func 'mag(U)' 
+
+postProcess -func 'components(U)' 
+
+postProcess -func sampleDict
+
+paraFoam

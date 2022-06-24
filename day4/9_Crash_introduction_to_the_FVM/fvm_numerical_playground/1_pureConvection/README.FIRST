@@ -1,0 +1,21 @@
+#How to run me:
+
+
+
+foamCleanTutorials
+
+blockMesh
+
+checkMesh
+
+scalarTransportFoam | tee log
+
+postProcess -func sampleDict -latestTime
+
+paraFoam
+
+
+
+#plot solution with gnuplot
+
+gnuplot ./gnuplot/gnuplot_script

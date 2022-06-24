@@ -1,0 +1,18 @@
+#How to run me:
+
+
+
+#To generate the mesh use this single script
+sh run_mesh.sh
+
+checkMesh
+
+laplacianFoam
+
+paraFoam
+
+
+
+#For sampling
+
+postProcess -func sampleDict

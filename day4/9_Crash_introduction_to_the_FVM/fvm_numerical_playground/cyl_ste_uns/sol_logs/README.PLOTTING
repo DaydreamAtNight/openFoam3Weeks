@@ -1,0 +1,23 @@
+#To plot in gnuplot:
+
+
+#To plot signal using column 3 (iteration vs qoi)
+plot [100:][] 're200_uns/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 w l
+plot [100:][] 're200_ste/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 w l
+
+
+#To compute statistics starting from record 500
+stat 're200_uns/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 every ::500
+stat 're200_ste/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 every ::500
+
+
+#To plot tow signals using column 3 (iteration vs qoi)
+plot [50:][] 're200_uns/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 w l, 're200_ste/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 3 w l
+
+
+#To plot signal using columns 1-3 (Time vs qoi)
+plot [1:][] 're200_uns/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 1:3 w l
+plot [1:][0.5:1.5] 're200_ste/postProcessing/forceCoeffs_object/0/forceCoeffs.dat' u 1:3 w l
+
+
+

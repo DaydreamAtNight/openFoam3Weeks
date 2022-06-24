@@ -1,0 +1,27 @@
+foamCleanTutorials
+
+blockMesh
+
+checkMesh
+
+rm -rf 0
+
+cp -r 0_org/ 0
+
+setFields
+
+sonicFoam | tee sonicFoam.log
+
+postProcess -func 'mag(U)' 
+
+postProcess -func 'components(U)' 
+
+postProcess -func sampleDict -latestTime
+
+cp -r postProcessing/sampleDict/0.1/ ../shockTube_vanleer/postProcessing/sampleDict/0.1_Euler_Minmod
+
+cd ../shockTube_vanleer/python/
+
+python3 sodshocktube.py 
+
+code vel_mag.png

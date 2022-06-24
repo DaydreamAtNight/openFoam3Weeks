@@ -1,0 +1,175 @@
+Ran on a Intel Xeon X5670@2.93GHz
+
+
+****************************************************************************
+c1 
+	solver          PCG;
+        preconditioner  FDIC;
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c2
+        solver          smoothSolver;
+        smoother  	symGaussSeidel;
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c3
+        solver          ICCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            tolerance       1e-05;
+            relTol          0;
+            smoother        GaussSeidel;
+            nPreSweeps      0;
+            nPostSweeps     2;
+            nFinestSweeps   2;
+            cacheAgglomeration on;
+            nCellsInCoarsestLevel 10;
+            agglomerator    faceAreaPair;
+            mergeLevels     1;
+        }
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c4
+        solver           GAMG;
+        tolerance        1e-6;
+        relTol           0.01;
+        smoother         GaussSeidel;
+        nPreSweeps       0;
+        nPostSweeps      2;
+        cacheAgglomeration on;
+        agglomerator     faceAreaPair;
+        nCellsInCoarsestLevel 100;
+        mergeLevels      1;
+****************************************************************************
+
+
+****************************************************************************
+c5
+        solver          PCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            tolerance       1e-05;
+            relTol          0;
+            smoother        GaussSeidel;
+            nPreSweeps      0;
+            nPostSweeps     2;
+            nFinestSweeps   2;
+            cacheAgglomeration on;
+            nCellsInCoarsestLevel 10;
+            agglomerator    faceAreaPair;
+            mergeLevels     1;
+        }
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c6
+	renumberMesh
+		+
+       	solver           GAMG;
+        tolerance        1e-6;
+        relTol           0.01;
+        smoother         GaussSeidel;
+        nPreSweeps       0;
+        nPostSweeps      2;
+        cacheAgglomeration on;
+        agglomerator     faceAreaPair;
+        nCellsInCoarsestLevel 100;
+        mergeLevels      1;
+****************************************************************************
+
+
+****************************************************************************
+c7
+	renumberMesh
+		+
+	solver          PCG;
+        preconditioner  FDIC;
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c8
+	renumberMesh
+		+
+        solver          PCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            tolerance       1e-05;
+            relTol          0;
+            smoother        GaussSeidel;
+            nPreSweeps      0;
+            nPostSweeps     2;
+            nFinestSweeps   2;
+            cacheAgglomeration on;
+            nCellsInCoarsestLevel 10;
+            agglomerator    faceAreaPair;
+            mergeLevels     1;
+        }
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c9
+	renumberMesh
+		+
+        solver          ICCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            tolerance       1e-05;
+            relTol          0;
+            smoother        GaussSeidel;
+            nPreSweeps      0;
+            nPostSweeps     2;
+            nFinestSweeps   2;
+            cacheAgglomeration on;
+            nCellsInCoarsestLevel 10;
+            agglomerator    faceAreaPair;
+            mergeLevels     1;
+        }
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c10 
+	solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-06;
+        relTol          0.01;
+****************************************************************************
+
+
+****************************************************************************
+c11
+	As c1 but uncorverged
+
+	solver          PCG;
+        preconditioner  FDIC;
+        tolerance       1e-06;
+        relTol          0.01;
+	maxIter		1;
+****************************************************************************

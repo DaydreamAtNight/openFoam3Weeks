@@ -1,0 +1,115 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+14
+(
+    fuselage
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3343;
+        startFace       1044002;
+    }
+    strake
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1249;
+        startFace       1047345;
+    }
+    wing
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3267;
+        startFace       1048594;
+    }
+    vertical-tail
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2274;
+        startFace       1051861;
+    }
+    horizontal-tail
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2302;
+        startFace       1054135;
+    }
+    intake
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          27;
+        startFace       1056437;
+    }
+    intake-ramp
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          79;
+        startFace       1056464;
+    }
+    exhaust
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          36;
+        startFace       1056543;
+    }
+    symmetry
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          7677;
+        startFace       1056579;
+    }
+    side
+    {
+        type            patch;
+        nFaces          2498;
+        startFace       1064256;
+    }
+    downstream
+    {
+        type            patch;
+        nFaces          1216;
+        startFace       1066754;
+    }
+    upper
+    {
+        type            patch;
+        nFaces          1236;
+        startFace       1067970;
+    }
+    lower
+    {
+        type            patch;
+        nFaces          1216;
+        startFace       1069206;
+    }
+    upstream
+    {
+        type            patch;
+        nFaces          1236;
+        startFace       1070422;
+    }
+)
+
+// ************************************************************************* //

@@ -1,0 +1,18 @@
+How to run me:
+
+
+
+You do not need to run this case
+We will used it to play around with paraview/paraFoam
+
+
+
+To untar the file:
+
+tar -xzvf cylinder.tar.gz
+
+
+
+Then open the file cylinder.e in paraview.
+
+This is an OpenFOAM solution saved in exodusII format.

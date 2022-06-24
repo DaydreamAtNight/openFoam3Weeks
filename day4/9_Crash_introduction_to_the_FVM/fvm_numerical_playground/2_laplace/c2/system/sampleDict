@@ -1,0 +1,69 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6.x                                   |
+|   \\  /    A nd           | Website:  https://openfoam.org                  |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type sets;
+
+setFormat raw;
+
+surlineFaceFormat foamFile;
+
+interpolationScheme cellPointFace;
+
+// Fields to sample.
+fields
+(
+    T
+);
+
+sets
+(
+    T_sampling
+    {
+/*
+        type            lineCell;
+        axis            x;
+        start           (-1 0.0 0.0);
+        end             ( 2 0.0 0.0);
+*/
+
+/*
+        type            lineFace;
+        axis            x;
+        start           (0 0.0 0.0);
+        end             (1 0.0 0.0);
+*/
+
+/*
+        type            lineCellFace;
+        axis            x;
+        start           (-1 0.0 0.0);
+        end             ( 2 0.0 0.0);
+*/
+
+        type            lineUniform;
+        axis            x;
+        start           (-1 0.0 0.0);
+        end             (1 0.0 0.0);
+	nPoints		100;
+
+    }
+);
+
+surlineFaces
+(
+);
+
+// *********************************************************************** //
